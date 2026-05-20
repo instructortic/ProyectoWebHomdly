@@ -1,0 +1,280 @@
+/* <!-- ===============================
+       INICIO HEADER MARIA JOSE
+  ================================ --> */
+
+/* ===============================
+   TOPBAR - barra azul superior
+================================ */
+.topbar {
+  background-color: #2d5f7c;
+  color: white;
+  font-size: 13px;
+  padding: 7px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topbar-frase {
+  font-style: italic;
+}
+
+/* Grupo derecho: email, teléfono e íconos */
+.topbar-contacto {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.topbar-icono {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.topbar-icono:hover {
+  color: #aed4e8;
+}
+
+
+/* ===============================
+   HEADER - barra blanca con nav
+================================ */
+.header {
+  background-color: white;
+  border-bottom: 1px solid #e0e0e0;
+  position: sticky;  /* se queda fijo al hacer scroll */
+  top: 0;
+  z-index: 100;
+}
+
+/* Contenedor interno del header */
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 30px;
+}
+
+/* Logo */
+.logo img {
+  height: 45px;
+  display: block;
+}
+
+/* Menú de botones */
+.nav-menu {
+  display: flex;
+  gap: 30px;  /* aumenta este número si los quieres más separados */
+}
+
+/* Cada botón del menú */
+.nav-btn {
+  color: #1a3a4f;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 6px 18px;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.nav-btn:hover {
+  background-color: #f0f4f7;
+  color: #2d5f7c;
+  text-decoration: none;
+}
+
+/* Ícono de usuario */
+.icono-usuario {
+  color: #1a3a4f;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.icono-usuario:hover {
+  color: #2d5f7c;
+}
+
+/* Botón hamburguesa - oculto en escritorio */
+.hamburguesa {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.hamburguesa span {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color: #1a3a4f;
+  border-radius: 2px;
+}
+
+
+/* ===============================
+   CARRUSEL DE FOTOS
+================================ */
+.carrusel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  
+  height: 580px;
+  background-color: #ccc;
+}
+
+/* Cada slide ocupa todo el carrusel */
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;                       /* oculto por defecto */
+  transition: opacity 0.8s ease;    /* fade suave al cambiar */
+}
+
+/* El slide activo se ve */
+.slide.activo {
+  opacity: 1;
+}
+
+/* La imagen llena el slide */
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* recorta para que llene sin deformarse */
+}
+
+/* Puntitos de navegación */
+.carrusel-puntos {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.punto {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(255,255,255,0.5);
+  cursor: pointer;
+  border: none;
+  transition: background 0.3s;
+}
+
+.punto.activo {
+  background-color: white;
+}
+
+/* ── PROTECCIÓN HEADER ── */
+.header,
+.topbar {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+/* Texto del header: solo elementos de texto, NO iconos */
+.header .nav-btn,
+.header .logo,
+.topbar-frase,
+.topbar-contacto,
+.topbar-email,
+.topbar-tel {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+
+/* ===============================
+   RESPONSIVE - tamaño celular
+================================ */
+@media (max-width: 600px) {
+
+  /* Topbar: todo apilado en columna */
+  .topbar {
+  
+        flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 15px;
+  }
+    /* Ocultar email y teléfono en móvil */
+  .topbar-email,
+  .topbar-tel {
+    display: none;
+  }
+
+  .topbar-contacto {
+    /* flex-wrap: wrap; */
+    gap: 10px;
+  }
+
+  /* Header: también menos padding */
+  .header-inner {
+    padding: 10px 15px;
+    position: relative;   /* necesario para que el menú absoluto se posicione aquí */
+    flex-wrap: nowrap;
+    gap: 10px;
+  }
+
+  /* Mostrar hamburguesa, ocultar menú */
+ .hamburguesa {
+    display: flex;
+    order: 4;        /* va después del ícono usuario */
+    margin-left: 8px;
+  }
+
+   .usuario-wrapper {
+    display: flex;   /* lo mostramos, va antes de la hamburguesa */
+    order: 3;
+    margin-left: auto;
+  }
+  .usuario-wrapper:hover .usuario-dropdown {
+    display: none;
+  }
+  
+
+  /* El menú se oculta por defecto en móvil */
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+    background: white;
+    position: absolute;
+    top: 100%;        /* ← esto en lugar de 66px */
+    left: 0;
+    z-index: 99;
+    border-top: 1px solid #eee;
+  }
+
+  .nav-menu.abierto {
+    display: flex !important;
+  }
+
+  .nav-btn {
+    padding: 12px 10px;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+  }
+
+  /* Ícono usuario se va a la derecha en la misma fila del logo */
+  .icono-usuario {
+    margin-left: auto;
+  }
+
+  /* Carrusel más bajo en móvil */
+  .carrusel {
+    height: 220px;
+  }
+}
+/* <!-- ===============================
+       FIN MARIA JOSE
+  ================================ --> */

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>HONDLY Inmobiliaria</title>
+<link rel="stylesheet" href="assets/css/stylePopUp.css">
+
+<!-- ICONOS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- SUBIR LOGO -->
+<input type="file" id="logoInput" accept="image/*" hidden>
+<img id="logoPreview" src="img/logo.png" alt="Logo Hondly" class="logo">
+<button class="btn-logo" onclick="document.getElementById('logoInput').click()">Subir logo</button>
+
+<div class="overlay active" id="overlay">
+    <div class="popup">
+
+        <span id="cerrar">&times;</span>
+
+        <h2>🏡 HONDLY</h2>
+        <p class="frase">“Compra, vende o arrienda con confianza.”</p>
+
+        <!-- SLIDER -->
+        <div class="slider">
+
+            <div class="slide active">
+                <img src="https://multimedia.metrocuadrado.com/14973-M5268399/14973-M5268399_141_x.jpg">
+                <div class="info">
+                    <h3>$280.000.000</h3>
+                    <p>Casa familiar - 3 habitaciones</p>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="https://cdn4.fincaraiz.com.co/repo/img/th.outside384x275.69a8d41e87ada_infocdn__tvin0hyg01e6es7ptc9jgfeduhsqyc5f3dbr3fvqjpg.jpg">
+                <div class="info">
+                    <h3>$350.000.000</h3>
+                    <p>Terreno ideal para inversión</p>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="https://img.resemmedia.com/eyJidWNrZXQiOiJwcmQtbGlmdWxsY29ubmVjdC1iYWNrZW5kLWIyYi1pbWFnZXMiLCJrZXkiOiJpbmdlc3Rlci8wMTljN2UyOS0zOWI3LTczZjUtYjZiOS01N2E5YTE5NzYzZWEvYTU4MDliMmI2ZWU3ZTM3MDkyMzdhZjk4OGI2NjUzNzcyNjM3NzI1N2VlNzlkNmFlYmZkNDIyNzliNTQyMmY5Ni5qcGVnIiwiYnJhbmQiOiJyZXNlbSIsImVkaXRzIjp7InJvdGF0ZSI6bnVsbCwicmVzaXplIjp7IndpZHRoIjozNTQsImhlaWdodCI6MjQwLCJmaXQiOiJjb3ZlciJ9fX0=">
+                <div class="info">
+                    <h3>$420.000.000</h3>
+                    <p>Casa campestre de lujo</p>
+                </div>
+            </div>
+
+            <!-- FLECHAS -->
+            <div class="controles">
+                <button id="prev"><i class="fa-solid fa-chevron-left"></i></button>
+                <button id="next"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+
+        </div>
+
+        <!-- REDES -->
+        <div class="redes">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/573000000000" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+
+        <!-- BOTÓN -->
+        <a href="https://wa.me/573000000000?text=Hola%20quiero%20información%20de%20una%20propiedad%20Hondly"
+           class="whatsapp" target="_blank">
+           Contactar
+        </a>
+
+    </div>
+</div>
+
+<script src="assets/js/scriptPopUp.js"></script>
+</body>
+</html>

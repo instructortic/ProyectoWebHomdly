@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Política de Seguridad y Cookies – Homdly</title>
+  <link rel="shortcut icon" href="./assets/images/iconoLogo.ico" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0..1,0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/styleFooter.css">
+  <style>
+    :root{--primary:#f2aa1f;--secondary:#114358;--light:#f1ece7;--white:#ffffff;--text:#2a2a2a;--muted:#6b7280;--border:#e5ddd4;}
+    html{scroll-behavior:smooth;}
+    body{font-family:"Inter",sans-serif;font-size:14px;color:var(--text);background:var(--white);line-height:1.75;}
+    .hero{background:linear-gradient(135deg,var(--secondary) 0%,#0d3345 100%);padding:56px 24px 0;position:relative;overflow:hidden;}
+    .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 85% 20%,rgba(242,170,31,.1) 0%,transparent 55%);pointer-events:none;}
+    .hero-inner{max-width:820px;margin:0 auto;position:relative;}
+    .hero-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(242,170,31,.15);border:1px solid rgba(242,170,31,.35);border-radius:20px;padding:4px 14px;font-size:11px;font-weight:600;color:var(--primary);text-transform:uppercase;letter-spacing:.8px;margin-bottom:16px;}
+    .hero h1{font-size:44px;font-weight:800;color:var(--white);line-height:1.1;letter-spacing:-1.5px;margin-bottom:12px;}
+    .hero h1 em{color:var(--primary);font-style:normal;}
+    .hero-sub{font-size:14px;color:rgba(255,255,255,.65);max-width:520px;margin-bottom:32px;}
+    .tabs-bar{display:flex;gap:4px;margin-top:8px;}
+    .tab-btn{padding:12px 28px;font-size:14px;font-weight:600;color:rgba(255,255,255,.55);background:transparent;border:none;border-radius:10px 10px 0 0;cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:8px;}
+    .tab-btn:hover{color:rgba(255,255,255,.85);background:rgba(255,255,255,.07);}
+    .tab-btn.active{color:var(--secondary);background:var(--white);font-weight:700;}
+    .tab-panel{display:none;}
+    .tab-panel.active{display:block;}
+    .page-wrap{max-width:900px;margin:0 auto;padding:56px 24px 80px;display:grid;grid-template-columns:220px 1fr;gap:48px;align-items:start;}
+    .toc{position:sticky;top:80px;}
+    .toc-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-bottom:12px;}
+    .toc-list{list-style:none;}
+    .toc-list li{margin-bottom:2px;}
+    .toc-list a{display:block;padding:6px 12px;font-size:13px;color:var(--muted);text-decoration:none;border-radius:6px;border-left:2px solid transparent;transition:all .2s;}
+    .toc-list a:hover,.toc-list a.active{color:var(--secondary);background:var(--light);border-left-color:var(--primary);font-weight:500;}
+    .content section{margin-bottom:48px;}
+    .section-header{display:flex;align-items:center;gap:12px;margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid var(--border);}
+    .section-num{width:32px;height:32px;background:var(--primary);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:var(--secondary);flex-shrink:0;}
+    h2{font-size:22px;font-weight:600;color:var(--secondary);letter-spacing:-.3px;}
+    h3{font-size:16px;font-weight:600;color:var(--secondary);margin:24px 0 10px;}
+    p{margin-bottom:14px;font-size:14px;line-height:1.75;}
+    p:last-child{margin-bottom:0;}
+    .info-card{background:var(--light);border-radius:12px;padding:20px 24px;margin:20px 0;border-left:4px solid var(--primary);}
+    .info-card p{margin:0;}
+    .alert-card{background:#fff8e6;border-radius:12px;padding:20px 24px;margin:20px 0;border-left:4px solid var(--primary);}
+    .alert-card p{margin:0;}
+    ul.styled{list-style:none;padding:0;margin:12px 0 16px;}
+    ul.styled li{padding:8px 0 8px 24px;position:relative;font-size:14px;border-bottom:1px solid var(--border);}
+    ul.styled li:last-child{border-bottom:none;}
+    ul.styled li::before{content:"";position:absolute;left:0;top:50%;transform:translateY(-50%);width:8px;height:8px;background:var(--primary);border-radius:50%;}
+    .pillars-section{background:var(--light);padding:40px 24px;}
+    .pillars-inner{max-width:900px;margin:0 auto;}
+    .pillars-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-bottom:20px;text-align:center;}
+    .pillars-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+    .pillar{background:var(--white);border-radius:12px;padding:20px 14px;text-align:center;border-bottom:3px solid var(--primary);box-shadow:0 2px 8px rgba(17,67,88,.06);}
+    .pillar-icon{font-size:26px;margin-bottom:8px;}
+    .pillar-name{font-size:13px;font-weight:700;color:var(--secondary);margin-bottom:4px;}
+    .pillar-desc{font-size:12px;color:var(--muted);line-height:1.5;}
+    .resp-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:16px 0;}
+    .resp-card{background:var(--light);border-radius:12px;padding:20px;}
+    .resp-card-title{font-size:14px;font-weight:700;color:var(--secondary);margin-bottom:12px;}
+    .resp-card ul{list-style:none;padding:0;}
+    .resp-card ul li{font-size:13px;padding:5px 0 5px 16px;position:relative;border-bottom:1px solid var(--border);}
+    .resp-card ul li:last-child{border-bottom:none;}
+    .resp-card ul li::before{content:"→";position:absolute;left:0;color:var(--primary);font-weight:700;}
+    .incident-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px 0;}
+    .incident-step{background:var(--secondary);border-radius:12px;padding:20px;text-align:center;}
+    .incident-step-num{width:36px;height:36px;background:var(--primary);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800;color:var(--secondary);margin:0 auto 12px;}
+    .incident-step-title{font-size:13px;font-weight:700;color:var(--primary);margin-bottom:6px;}
+    .incident-step p{font-size:12px;color:rgba(255,255,255,.7);margin:0;}
+    .cookie-table-wrap{overflow-x:auto;margin:16px 0;}
+    .cookie-table{width:100%;border-collapse:collapse;font-size:13px;}
+    .cookie-table th{background:var(--secondary);color:var(--white);padding:12px 16px;text-align:left;font-weight:600;font-size:12px;}
+    .cookie-table th:first-child{border-radius:8px 0 0 0;}
+    .cookie-table th:last-child{border-radius:0 8px 0 0;}
+    .cookie-table td{padding:11px 16px;border-bottom:1px solid var(--border);vertical-align:top;line-height:1.5;}
+    .cookie-table tr:last-child td{border-bottom:none;}
+    .cookie-table tr:nth-child(even) td{background:#fafaf8;}
+    .badge{display:inline-block;padding:2px 10px;border-radius:20px;font-size:11px;font-weight:600;}
+    .badge-required{background:rgba(17,67,88,.1);color:var(--secondary);}
+    .badge-optional{background:rgba(242,170,31,.15);color:#8a5e00;}
+    .banner-preview{background:var(--secondary);border-radius:16px;padding:0;overflow:hidden;margin:20px 0;}
+    .banner-preview-label{background:var(--primary);padding:8px 20px;font-size:11px;font-weight:700;color:var(--secondary);text-transform:uppercase;letter-spacing:1px;}
+    .banner-preview-body{padding:20px 24px;}
+    .banner-preview-body p{color:rgba(255,255,255,.8);font-size:13px;margin-bottom:16px;}
+    .banner-btn-row{display:flex;gap:10px;flex-wrap:wrap;}
+    .btn-accept{background:var(--primary);color:var(--secondary);border:none;border-radius:8px;padding:10px 20px;font-size:13px;font-weight:700;cursor:pointer;}
+    .btn-reject{background:transparent;color:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.25);border-radius:8px;padding:10px 20px;font-size:13px;cursor:pointer;}
+    .btn-config{background:transparent;color:rgba(255,255,255,.55);border:none;font-size:13px;text-decoration:underline;cursor:pointer;}
+    .contact-box{background:linear-gradient(135deg,var(--secondary) 0%,#1a5a7a 100%);border-radius:16px;padding:32px;margin-top:48px;position:relative;overflow:hidden;}
+    .contact-box::before{content:"";position:absolute;top:-30px;right:-30px;width:140px;height:140px;background:rgba(242,170,31,.15);border-radius:50%;}
+    .contact-box h3{color:var(--primary);margin-top:0;font-size:20px;font-weight:700;}
+    .contact-box p{color:rgba(255,255,255,.75);font-size:14px;}
+    .contact-box a{color:var(--primary);font-weight:600;text-decoration:none;}
+    @media(max-width:900px){.pillars-grid{grid-template-columns:1fr 1fr;}.incident-steps{grid-template-columns:1fr;}.resp-grid{grid-template-columns:1fr;}}
+    @media(max-width:720px){.page-wrap{grid-template-columns:1fr;}.toc{display:none;}.hero h1{font-size:30px;}.tab-btn{padding:10px 14px;font-size:13px;}}
+  </style>
+</head>
+<body>
+
+  <header class="header"></header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <h1>Seguridad <em>&amp;</em> Cookies</h1>
+      <p class="hero-sub">Conoce cómo Homdly protege tu información y gestiona las cookies en nuestra plataforma, conforme a la normativa colombiana vigente.</p>
+      <div class="tabs-bar">
+        <button class="tab-btn active" onclick="switchTab('seguridad',this)">🛡️ Política de Seguridad</button>
+        <button class="tab-btn" onclick="switchTab('cookies',this)">🍪 Política de Cookies</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEGURIDAD -->
+  <div class="tab-panel active" id="panel-seguridad">
+    <div class="pillars-section">
+      <div class="pillars-inner">
+        <p class="pillars-title">Nuestros pilares de seguridad</p>
+        <div class="pillars-grid">
+          <div class="pillar"><div class="pillar-icon">🔐</div><div class="pillar-name">Confidencialidad</div><p class="pillar-desc">Solo personas autorizadas acceden a la información.</p></div>
+          <div class="pillar"><div class="pillar-icon">✅</div><div class="pillar-name">Integridad</div><p class="pillar-desc">Los datos no son alterados sin autorización.</p></div>
+          <div class="pillar"><div class="pillar-icon">⚡</div><div class="pillar-name">Disponibilidad</div><p class="pillar-desc">La plataforma está disponible cuando la necesitas.</p></div>
+          <div class="pillar"><div class="pillar-icon">📋</div><div class="pillar-name">Cumplimiento</div><p class="pillar-desc">Alineados con la normativa colombiana vigente.</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="page-wrap">
+      <aside class="toc">
+        <p class="toc-title">Contenido</p>
+        <ul class="toc-list">
+          <li><a href="#seg-objetivo">1. Objetivo</a></li>
+          <li><a href="#seg-alcance">2. Alcance</a></li>
+          <li><a href="#seg-medidas">3. Medidas Técnicas</a></li>
+          <li><a href="#seg-acceso">4. Control de Acceso</a></li>
+          <li><a href="#seg-resp">5. Responsabilidades</a></li>
+          <li><a href="#seg-incidentes">6. Incidentes</a></li>
+          <li><a href="#seg-continuidad">7. Continuidad</a></li>
+          <li><a href="#seg-usuario">8. Seguridad del Usuario</a></li>
+          <li><a href="#seg-legal">9. Marco Legal</a></li>
+          <li><a href="#seg-revision">10. Revisión</a></li>
+        </ul>
+      </aside>
+      <div class="content">
+        <section id="seg-objetivo">
+          <div class="section-header"><div class="section-num">1</div><h2>Objetivo</h2></div>
+          <p>La presente Política de Seguridad establece el marco de referencia que Homdly S.A.S. adopta para proteger la confidencialidad, integridad y disponibilidad de la información de sus usuarios, empleados, aliados y activos tecnológicos, garantizando la continuidad de sus operaciones y el cumplimiento de la normativa colombiana vigente.</p>
+          <div class="info-card"><p>En Homdly entendemos que la confianza de nuestros usuarios es el activo más valioso. Cada transacción inmobiliaria involucra información sensible; por ello, la seguridad es una prioridad estratégica y no solo un requisito técnico.</p></div>
+        </section>
+        <section id="seg-alcance">
+          <div class="section-header"><div class="section-num">2</div><h2>Alcance</h2></div>
+          <p>Esta política aplica a:</p>
+          <ul class="styled">
+            <li>Todos los sistemas de información, plataformas y aplicaciones de Homdly.</li>
+            <li>Empleados, contratistas, proveedores y aliados que accedan a los sistemas de la empresa.</li>
+            <li>Los datos personales y financieros de compradores, arrendatarios y propietarios.</li>
+            <li>Las instalaciones físicas donde se procesa información de Homdly.</li>
+          </ul>
+        </section>
+        <section id="seg-medidas">
+          <div class="section-header"><div class="section-num">3</div><h2>Medidas Técnicas de Seguridad</h2></div>
+          <h3>Cifrado y comunicaciones seguras</h3>
+          <ul class="styled">
+            <li>Cifrado TLS 1.2 / 1.3 en todas las comunicaciones entre usuario y plataforma (HTTPS obligatorio).</li>
+            <li>Cifrado AES-256 para datos sensibles almacenados en bases de datos.</li>
+            <li>Tokens JWT con expiración corta para autenticación de sesiones.</li>
+          </ul>
+          <h3>Infraestructura y red</h3>
+          <ul class="styled">
+            <li>Firewalls de aplicación web (WAF) para proteger contra ataques comunes (OWASP Top 10).</li>
+            <li>Segmentación de redes internas por nivel de confidencialidad.</li>
+            <li>Monitoreo continuo de tráfico y detección de intrusiones (IDS/IPS).</li>
+            <li>Copias de seguridad automáticas cifradas con retención mínima de 30 días.</li>
+          </ul>
+          <h3>Desarrollo seguro</h3>
+          <ul class="styled">
+            <li>Revisiones de código orientadas a seguridad (SAST/DAST) en el ciclo de desarrollo.</li>
+            <li>Gestión de dependencias y actualizaciones de parches de seguridad.</li>
+            <li>Pruebas de penetración periódicas realizadas por terceros especializados.</li>
+          </ul>
+        </section>
+        <section id="seg-acceso">
+          <div class="section-header"><div class="section-num">4</div><h2>Control de Acceso</h2></div>
+          <ul class="styled">
+            <li>Autenticación multifactor (MFA) obligatoria para accesos administrativos.</li>
+            <li>Revisión trimestral de permisos y accesos de empleados y proveedores.</li>
+            <li>Revocación inmediata de accesos al terminar la relación laboral o contractual.</li>
+            <li>Registro de auditoría (logs) de accesos a datos sensibles con retención de 12 meses.</li>
+            <li>Política de contraseñas fuertes: mínimo 12 caracteres, sin reutilización de las últimas 5.</li>
+          </ul>
+        </section>
+        <section id="seg-resp">
+          <div class="section-header"><div class="section-num">5</div><h2>Responsabilidades</h2></div>
+          <div class="resp-grid">
+            <div class="resp-card"><div class="resp-card-title">🏢 Homdly se compromete a:</div><ul><li>Mantener medidas de seguridad actualizadas</li><li>Notificar incidentes que afecten tus datos</li><li>Capacitar al equipo en seguridad</li><li>Auditar periódicamente los sistemas</li><li>Cumplir la normativa colombiana vigente</li></ul></div>
+            <div class="resp-card"><div class="resp-card-title">👤 El usuario se compromete a:</div><ul><li>Usar contraseñas seguras y no compartirlas</li><li>Reportar actividad sospechosa de inmediato</li><li>No compartir credenciales de acceso</li><li>Mantener su dispositivo actualizado</li><li>No acceder desde redes públicas no seguras</li></ul></div>
+          </div>
+        </section>
+        <section id="seg-incidentes">
+          <div class="section-header"><div class="section-num">6</div><h2>Gestión de Incidentes de Seguridad</h2></div>
+          <div class="incident-steps">
+            <div class="incident-step"><div class="incident-step-num">1</div><div class="incident-step-title">Detección</div><p>Identificación y clasificación del incidente.</p></div>
+            <div class="incident-step"><div class="incident-step-num">2</div><div class="incident-step-title">Contención</div><p>Medidas para limitar el impacto y evitar propagación.</p></div>
+            <div class="incident-step"><div class="incident-step-num">3</div><div class="incident-step-title">Notificación</div><p>Aviso a usuarios afectados y a la SIC.</p></div>
+          </div>
+          <div class="alert-card"><p>⚠️ De acuerdo con la Ley 1581 de 2012, Homdly notificará a la SIC y a los titulares afectados sobre cualquier incidente de seguridad que pueda vulnerar sus datos personales.</p></div>
+        </section>
+        <section id="seg-continuidad">
+          <div class="section-header"><div class="section-num">7</div><h2>Continuidad del Negocio</h2></div>
+          <ul class="styled">
+            <li>Infraestructura redundante en múltiples zonas de disponibilidad.</li>
+            <li>Tiempo de recuperación objetivo (RTO) de máximo 4 horas para servicios críticos.</li>
+            <li>Punto de recuperación objetivo (RPO) de máximo 1 hora para datos críticos.</li>
+            <li>Pruebas de recuperación ante desastres realizadas al menos dos veces al año.</li>
+          </ul>
+        </section>
+        <section id="seg-usuario">
+          <div class="section-header"><div class="section-num">8</div><h2>Recomendaciones de Seguridad para el Usuario</h2></div>
+          <ul class="styled">
+            <li>Usar una contraseña única para Homdly, diferente a la de otros servicios.</li>
+            <li>Activar la verificación en dos pasos (2FA) desde la configuración de tu cuenta.</li>
+            <li>Verificar siempre que la URL sea <strong>https://www.homdly.co</strong> antes de ingresar tus datos.</li>
+            <li>No hacer clic en enlaces sospechosos que soliciten tus credenciales.</li>
+            <li>Cerrar sesión al usar dispositivos compartidos o públicos.</li>
+          </ul>
+          <div class="alert-card"><p>⚠️ Homdly <strong>nunca</strong> te solicitará tu contraseña completa, datos bancarios o códigos de verificación por correo, SMS o llamada. Si recibes esto, son intentos de phishing. Repórtalos a <strong>seguridad@homdly.co</strong>.</p></div>
+        </section>
+        <section id="seg-legal">
+          <div class="section-header"><div class="section-num">9</div><h2>Marco Legal y Normativo</h2></div>
+          <ul class="styled">
+            <li>Ley 1581 de 2012 – Protección de Datos Personales</li>
+            <li>Decreto 1377 de 2013 – Reglamentación de tratamiento de datos</li>
+            <li>Ley 1273 de 2009 – Delitos informáticos en Colombia</li>
+            <li>ISO/IEC 27001:2022 – Gestión de Seguridad de la Información (referencia)</li>
+            <li>OWASP Application Security Verification Standard (referencia técnica)</li>
+            <li>Normativas de la Superintendencia de Industria y Comercio (SIC)</li>
+          </ul>
+        </section>
+        <section id="seg-revision">
+          <div class="section-header"><div class="section-num">10</div><h2>Revisión y Mejora Continua</h2></div>
+          <p>Esta Política de Seguridad es revisada al menos una vez al año, o cuando ocurran cambios significativos en la organización, los sistemas de información o el entorno normativo.</p>
+        </section>
+        <div class="contact-box">
+          <h3>Reportar un problema de seguridad</h3>
+          <p>Si detectas una vulnerabilidad o tienes inquietudes, contáctanos de inmediato.</p>
+          <p>🛡️ <a href="mailto:seguridad@homdly.co">seguridad@homdly.co</a></p>
+          <p>📋 Protección de datos: <a href="mailto:privacidad@homdly.co">privacidad@homdly.co</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- COOKIES -->
+  <div class="tab-panel" id="panel-cookies">
+    <div class="page-wrap">
+      <aside class="toc">
+        <p class="toc-title">Contenido</p>
+        <ul class="toc-list">
+          <li><a href="#ck-que-son">1. ¿Qué son las Cookies?</a></li>
+          <li><a href="#ck-tipos">2. Tipos de Cookies</a></li>
+          <li><a href="#ck-cuales">3. Cookies que Usamos</a></li>
+          <li><a href="#ck-terceros">4. Cookies de Terceros</a></li>
+          <li><a href="#ck-consentimiento">5. Consentimiento</a></li>
+          <li><a href="#ck-gestion">6. Cómo Gestionarlas</a></li>
+          <li><a href="#ck-legal">7. Marco Legal</a></li>
+          <li><a href="#ck-cambios">8. Cambios</a></li>
+        </ul>
+      </aside>
+      <div class="content">
+        <section id="ck-que-son">
+          <div class="section-header"><div class="section-num">1</div><h2>¿Qué son las Cookies?</h2></div>
+          <p>Las cookies son pequeños archivos de texto que los sitios web almacenan en tu dispositivo cuando los visitas. Permiten que el sitio web recuerde tus preferencias, mantenga tu sesión activa y analice cómo interactúas con la plataforma.</p>
+          <div class="info-card"><p>En Homdly utilizamos cookies para ofrecerte una experiencia de búsqueda inmobiliaria más personalizada, segura y eficiente. Ninguna de nuestras cookies recopila información que permita identificarte sin tu consentimiento explícito.</p></div>
+        </section>
+        <section id="ck-tipos">
+          <div class="section-header"><div class="section-num">2</div><h2>Tipos de Cookies según su Finalidad</h2></div>
+          <h3>Por su duración</h3>
+          <ul class="styled">
+            <li><strong>Cookies de sesión:</strong> Se eliminan automáticamente al cerrar el navegador.</li>
+            <li><strong>Cookies persistentes:</strong> Permanecen en tu dispositivo durante un periodo determinado.</li>
+          </ul>
+          <h3>Por su origen</h3>
+          <ul class="styled">
+            <li><strong>Cookies propias:</strong> Establecidas directamente por Homdly desde nuestro dominio.</li>
+            <li><strong>Cookies de terceros:</strong> Establecidas por servicios externos integrados en nuestra plataforma.</li>
+          </ul>
+        </section>
+        <section id="ck-cuales">
+          <div class="section-header"><div class="section-num">3</div><h2>Cookies que Utilizamos en Homdly</h2></div>
+          <div class="cookie-table-wrap">
+            <table class="cookie-table">
+              <thead><tr><th>Nombre</th><th>Tipo</th><th>Duración</th><th>Finalidad</th><th>Estado</th></tr></thead>
+              <tbody>
+                <tr><td><code>homdly_session</code></td><td>Sesión</td><td>Al cerrar sesión</td><td>Mantener la sesión del usuario autenticado</td><td><span class="badge badge-required">Necesaria</span></td></tr>
+                <tr><td><code>homdly_csrf</code></td><td>Sesión</td><td>Al cerrar sesión</td><td>Protección contra ataques CSRF en formularios</td><td><span class="badge badge-required">Necesaria</span></td></tr>
+                <tr><td><code>homdly_prefs</code></td><td>Persistente</td><td>6 meses</td><td>Guardar preferencias de búsqueda</td><td><span class="badge badge-optional">Funcional</span></td></tr>
+                <tr><td><code>homdly_cookie_consent</code></td><td>Persistente</td><td>12 meses</td><td>Registrar tu decisión sobre cookies</td><td><span class="badge badge-required">Necesaria</span></td></tr>
+                <tr><td><code>_ga</code></td><td>Persistente</td><td>2 años</td><td>Google Analytics: distinguir usuarios únicos</td><td><span class="badge badge-optional">Analítica</span></td></tr>
+                <tr><td><code>_ga_*</code></td><td>Persistente</td><td>2 años</td><td>Google Analytics: mantener el estado de la sesión</td><td><span class="badge badge-optional">Analítica</span></td></tr>
+                <tr><td><code>homdly_ads</code></td><td>Persistente</td><td>30 días</td><td>Mostrar propiedades destacadas de interés</td><td><span class="badge badge-optional">Marketing</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <section id="ck-terceros">
+          <div class="section-header"><div class="section-num">4</div><h2>Cookies de Terceros</h2></div>
+          <ul class="styled">
+            <li><strong>Google Analytics</strong> – Análisis estadístico de uso de la plataforma. <a href="https://policies.google.com/privacy" target="_blank" style="color:var(--secondary)">Ver política</a></li>
+            <li><strong>Google Maps</strong> – Visualización de ubicaciones de propiedades en mapa.</li>
+            <li><strong>Facebook Pixel</strong> – Solo si aceptas cookies de marketing, para medir eficacia de campañas.</li>
+            <li><strong>Hotjar</strong> – Análisis de comportamiento de usuario (mapas de calor), si consientes.</li>
+          </ul>
+        </section>
+        <section id="ck-consentimiento">
+          <div class="section-header"><div class="section-num">5</div><h2>Consentimiento y Banner de Cookies</h2></div>
+          <p>Al ingresar por primera vez a Homdly, verás un banner de consentimiento de cookies similar al siguiente:</p>
+          <div class="banner-preview">
+            <div class="banner-preview-label">Vista previa – Banner de Cookies Homdly</div>
+            <div class="banner-preview-body">
+              <p>Usamos cookies para mejorar tu experiencia de búsqueda inmobiliaria, analizar el tráfico y personalizar el contenido.</p>
+              <div class="banner-btn-row">
+                <button class="btn-accept">Aceptar todas</button>
+                <button class="btn-reject">Rechazar opcionales</button>
+                <button class="btn-config">Configurar preferencias</button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="ck-gestion">
+          <div class="section-header"><div class="section-num">6</div><h2>Cómo Gestionar las Cookies</h2></div>
+          <ul class="styled">
+            <li><strong>Google Chrome:</strong> Configuración → Privacidad y seguridad → Cookies y otros datos de sitios</li>
+            <li><strong>Mozilla Firefox:</strong> Ajustes → Privacidad y seguridad → Cookies y datos del sitio</li>
+            <li><strong>Safari:</strong> Preferencias → Privacidad → Gestionar datos de sitios web</li>
+            <li><strong>Microsoft Edge:</strong> Configuración → Cookies y permisos de sitio</li>
+          </ul>
+          <div class="info-card"><p>⚠️ Si deshabilitas todas las cookies, es posible que algunas funciones de Homdly no estén disponibles, como el inicio de sesión o el guardado de búsquedas favoritas.</p></div>
+        </section>
+        <section id="ck-legal">
+          <div class="section-header"><div class="section-num">7</div><h2>Marco Legal Aplicable en Colombia</h2></div>
+          <ul class="styled">
+            <li>Ley 1581 de 2012 – Protección de Datos Personales (Habeas Data)</li>
+            <li>Decreto 1377 de 2013 – Reglamentación parcial de la Ley 1581</li>
+            <li>Resolución SIC 76434 de 2012 y normas complementarias</li>
+          </ul>
+        </section>
+        <section id="ck-cambios">
+          <div class="section-header"><div class="section-num">8</div><h2>Cambios a esta Política</h2></div>
+          <p>Homdly podrá actualizar esta Política de Cookies en cualquier momento. Los cambios significativos serán notificados mediante un aviso en la plataforma. Te recomendamos revisarla periódicamente.</p>
+        </section>
+        <div class="contact-box">
+          <h3>¿Preguntas sobre las cookies?</h3>
+          <p>Si tienes dudas sobre el uso de cookies en Homdly, contáctanos:</p>
+          <p>📧 <a href="mailto:privacidad@homdly.co">privacidad@homdly.co</a></p>
+          <p>También puedes consultar nuestra <a href="Politica privacidad.html">Política de Privacidad</a> para más información.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER REAL DEL PROYECTO -->
+  <footer>
+    <div class="footer-top">
+      <div class="logo">
+        <img src="./assets/images/logo 50.png" alt="">
+        <div class="logo-text"><h1>HOMDLY</h1></div>
+      </div>
+      <div class="col">
+        <h4>Sobre Homdly</h4>
+        <a href="#">Destaca tu Publicación</a>
+        <a href="soporte.html">Preguntas Frecuentes</a>
+        <a href="Politica privacidad.html">Política de Privacidad</a>
+        <a href="Politica seguridad cookies.html">Política de Seguridad y Cookies</a>
+      </div>
+      <div class="col">
+        <h4>Mapa del Sitio</h4>
+        <a href="index.html">Inicio</a>
+        <a href="quienesSomos.html">¿Quiénes somos?</a>
+        <a href="anuncio.html">Propiedades</a>
+        <a href="soporte.html">Soporte</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="index.html" onclick="setTimeout(()=>{document.getElementById('modal-overlay')?.classList.add('active')},300);return true;">Inicio de sesión</a>
+        <a href="index.html" onclick="setTimeout(()=>{document.getElementById('modal-overlay')?.classList.add('active');document.getElementById('btn-sign-up')?.click()},300);return true;">Registro</a>
+      </div>
+      <div class="col">
+        <h4>Encuentra en Homdly</h4>
+        <a href="#">Propiedades Usadas</a>
+        <a href="#">Propiedades Nuevas</a>
+        <a href="#">Alquiler de propiedades</a>
+      </div>
+      <div class="col">
+        <h4>Contacto</h4>
+        <p>Dirección: Santa Fe de Antioquia<br>Celular: +57 300 000 0000<br>Email: contacto.homdly@gmail.com<br>homdly.inmobiliaria@hotmail.com<br>homdly.inmobiliaria@outlook.com<br>Redes Sociales:</p>
+        <div class="socials">
+          <a href="https://wa.me/message/GFB74UEFG2IVC1"><i class="bi bi-whatsapp"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=61588801114017"><i class="bi bi-facebook"></i></a>
+          <a href="https://mail.google.com"><i class="bi bi-envelope-fill"></i></a>
+          <a href="https://www.youtube.com/@HOMDLY"><i class="bi bi-youtube"></i></a>
+          <a href="https://www.instagram.com/homdly_inmobiliaria/"><i class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="icons" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="bi bi-arrow-up-circle"></i></div>
+    <div class="footer-bottom">
+      <span>2026 ADSOSENA | todos los derechos reservados</span>
+      <span>"Conectamos destinos, Creamos hogares"</span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+  <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/navegacion.js"></script>
+  <script src="./assets/js/scriptSimulacion.js"></script>
+  <script>
+    function switchTab(name, btn) {
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.getElementById('panel-' + name).classList.add('active');
+      btn.classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    window.addEventListener('scroll', () => {
+      const activePanel = document.querySelector('.tab-panel.active');
+      if (!activePanel) return;
+      const sections = activePanel.querySelectorAll('section[id]');
+      const links = document.querySelectorAll('.tab-panel.active .toc-list a');
+      let current = '';
+      sections.forEach(s => { if (window.scrollY >= s.offsetTop - 100) current = s.id; });
+      links.forEach(a => { a.classList.toggle('active', a.getAttribute('href') === '#' + current); });
+    });
+  </script>
+</body>
+</html>

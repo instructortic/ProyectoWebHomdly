@@ -1,0 +1,161 @@
+/* ================= OVERLAY ================= */
+.popup-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    backdrop-filter: blur(6px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* ================= POPUP ================= */
+.popup {
+    width: 420px;
+    max-width: 95%;
+    background: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    position: relative;
+    text-align: center;
+    animation: popupEntrada 0.5s ease;
+}
+
+@keyframes popupEntrada {
+    from { transform: scale(0.7); opacity: 0; }
+    to   { transform: scale(1);   opacity: 1; }
+}
+
+/* ================= CERRAR ================= */
+#cerrar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 22px;
+    cursor: pointer;
+    line-height: 1;
+}
+
+/* ================= TEXTO ================= */
+.popup h2 {
+    margin-bottom: 5px;
+}
+
+.frase {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 12px;
+}
+
+/* ================= SLIDER DEL POPUP ================= */
+/* Usamos .popup-slider en vez de .slider para no chocar con el carrusel */
+.popup-slider {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+/* SLIDE DEL POPUP */
+.popup-slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.popup-slide.active {
+    opacity: 1;
+}
+
+/* IMAGEN */
+.popup-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* INFO */
+.popup-slide .info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 12px;
+    color: #fff;
+    background: linear-gradient(transparent, rgba(0,0,0,0.85));
+    text-align: left;
+}
+
+/* ================= CONTROLES DEL POPUP ================= */
+.popup-controles {
+    position: absolute;
+    top: 50%;
+    inset-inline: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.popup-controles button {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(0,0,0,0.4);
+    color: #fff;
+    cursor: pointer;
+    backdrop-filter: blur(6px);
+    transition: all 0.3s ease;
+}
+
+.popup-controles button:hover {
+    background: #22c55e;
+    transform: scale(1.1);
+}
+
+/* ================= REDES ================= */
+.redes {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 15px;
+}
+
+.redes a {
+    color: #333;
+    font-size: 18px;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.redes a:hover {
+    color: #22c55e;
+    transform: scale(1.2);
+}
+
+/* ================= BOTÓN WHATSAPP ================= */
+.whatsapp {
+    display: block;
+    margin-top: 15px;
+    padding: 12px;
+    background: #25D366;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.whatsapp:hover {
+    background: #1ebe5d;
+    color: #fff;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 500px) {
+    .popup { padding: 15px; }
+    .popup-slider { height: 200px; }
+    .popup-controles button { width: 36px; height: 36px; }
+}
