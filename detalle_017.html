@@ -25,7 +25,7 @@
   <link rel="stylesheet" href="./assets/css/filtroL.css">
 </head>
 <body>
-    <header class="header"></header>
+    <!-- <header class="header"></header> -->
   
 <!-- modal galeria -->
   <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true">
@@ -53,16 +53,16 @@
     <div class="layout">
 
   <!-- SIDEBAR -->
-  <aside class="sidebar" id="sidebar">
+  <!-- <aside class="sidebar" id="sidebar">
     <div class="sidebar-header">
       <span class="sidebar-title">HOMDLY</span>
       <button class="clear-btn" onclick="clearFilters()">Limpiar todo</button>
-    </div>
+    </div> -->
 
-    <div class="sidebar-body" id="sidebarBody">
+    <!-- <div class="sidebar-body" id="sidebarBody"> -->
 
       <!-- 1. TIPO DE OPERACIÓN -->
-      <div class="filter-section">
+      <!-- <div class="filter-section">
         <div class="filter-label" onclick="toggleSection(this)">
             Tipo de Accion
           <svg class="chevron" width="12" height="12" viewBox="0 0 12 12"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -75,10 +75,10 @@
             <label for="op-venta" class="pill-label">Venta</label>
           </div>
         </div>
-      </div>
+      </div> -->
 
       <!-- 2. TIPO DE PROPIEDAD -->
-      <div class="filter-section">
+      <!-- <div class="filter-section">
         <div class="filter-label" onclick="toggleSection(this)">
             Tipo de Propiedad
           <svg class="chevron" width="12" height="12" viewBox="0 0 12 12"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -93,8 +93,8 @@
             <label class="check-item"><input type="checkbox"> <span class="check-label">Bodega</span></span></label>
           </div>
         </div>
-      </div>
-      <div class="filter-section">
+      </div> -->
+      <!-- <div class="filter-section">
         <div class="filter-label" onclick="toggleSection(this)">
             Características adicionales
           <svg class="chevron" width="12" height="12" viewBox="0 0 12 12"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -111,10 +111,10 @@
             <label class="check-item"><input type="checkbox"> <span class="check-label">Tina</span></label>
           </div>
         </div>
-      </div>
+      </div> -->
 
       <!-- 3. PRECIO -->
-      <div class="filter-section">
+      <!-- <div class="filter-section">
         <div class="filter-label" onclick="toggleSection(this)">
            Rango de Precio
           <svg class="chevron" width="12" height="12" viewBox="0 0 12 12"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -133,10 +133,10 @@
           </div>
          
         </div>
-      </div>
+      </div> -->
 
       <!-- 4. HABITACIONES / BAÑOS -->
-      <div class="filter-section">
+      <!-- <div class="filter-section">
         <div class="filter-label" onclick="toggleSection(this)">
             Habitaciones y Baños
           <svg class="chevron" width="12" height="12" viewBox="0 0 12 12"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -170,10 +170,10 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
 
       <!-- 5. ÁREA -->
-      <div class="filter-section">
+      <!-- <div class="filter-section">
         <div class="filter-label" onclick="toggleSection(this)">
           📐 Área (m²)
           <svg class="chevron" width="12" height="12" viewBox="0 0 12 12"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -194,13 +194,13 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
 
       
       
 
       <!-- 7. ESTRATO -->
-      <div class="filter-section">
+      <!-- <div class="filter-section">
         <div class="filter-label" onclick="toggleSection(this)">
            Estrato
           <svg class="chevron" width="12" height="12" viewBox="0 0 12 12"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -222,7 +222,7 @@
 
       <button class="apply-btn">Aplicar Filtros</button>
 
-    </div>
+    </div> -->
   </aside>
 
   
@@ -468,15 +468,15 @@
   </div><!-- /layout -->
   </section><!-- /filtroLateral para movil -->
 
-  <!-- BOTÓN FLOTANTE FILTROS (solo móvil) -->
+  <!-- BOTÓN FLOTANTE FILTROS (solo móvil)
   <button class="fab-filter" id="fabFilter" onclick="openDrawer()">
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="8" y1="12" x2="20" y2="12"/><line x1="12" y1="18" x2="20" y2="18"/></svg>
     Filtros
     <span class="fab-badge" id="fabBadge" style="display:none">0</span>
-  </button>
+  </button> -->
 
   <!-- OVERLAY DRAWER MÓVIL -->
-  <div class="drawer-overlay" id="drawerOverlay" onclick="closeDrawer()"></div>
+  <!-- <div class="drawer-overlay" id="drawerOverlay" onclick="closeDrawer()"></div> -->
 
   <div class="mobile-drawer" id="mobileDrawer">
     <div class="drawer-handle-bar"></div>
@@ -489,7 +489,7 @@
     <div class="drawer-scroll">
 
       <!-- TIPO DE ACCIÓN -->
-      <div class="dr-section">
+      <!-- <div class="dr-section">
         <div class="dr-label">Tipo de acción</div>
         <div class="dr-chips">
           <input type="radio" name="dr-operacion" id="dr-arr" class="dr-chip-input" checked>
@@ -497,10 +497,10 @@
           <input type="radio" name="dr-operacion" id="dr-ven" class="dr-chip-input">
           <label for="dr-ven" class="dr-chip">Venta</label>
         </div>
-      </div>
+      </div> -->
 
       <!-- TIPO DE PROPIEDAD -->
-      <div class="dr-section">
+      <!-- <div class="dr-section">
         <div class="dr-label">Tipo de inmueble</div>
         <div class="dr-chips">
           <input type="checkbox" id="dr-casa" class="dr-chip-input" onchange="updateBadge()">
@@ -516,10 +516,10 @@
           <input type="checkbox" id="dr-bodega" class="dr-chip-input" onchange="updateBadge()">
           <label for="dr-bodega" class="dr-chip">Bodega</label>
         </div>
-      </div>
+      </div> -->
 
       <!-- PRECIO -->
-      <div class="dr-section">
+      <!-- <div class="dr-section">
         <div class="dr-label">Rango de precio</div>
         <div class="dr-price-row">
           <input type="text" class="dr-price-input" id="drPriceMin" value="500.000" placeholder="Mín">
@@ -531,7 +531,7 @@
           <input type="range" id="drMin" min="0" max="10000000" value="500000" step="100000" oninput="updateDrRange()">
           <input type="range" id="drMax" min="0" max="10000000" value="5000000" step="100000" oninput="updateDrRange()">
         </div>
-      </div>
+      </div> -->
 
       <!-- HABITACIONES -->
       <div class="dr-section">
@@ -607,7 +607,7 @@
   </div>
 
 
-  <footer></footer>
+  <!-- <footer></footer> -->
   <script src="./assets/js/script.js"></script>
   <script src="./assets/js/navegacion.js"></script>
   <script src="./assets/js/detalle._017.js"></script>
