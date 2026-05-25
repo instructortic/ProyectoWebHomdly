@@ -1,13 +1,13 @@
 //array con las 7 fotos de la propiedad
 // Cada objeto tiene:URL de la imagen
 const fotos = [
-  { src: 'https://umbral.co/wp-content/uploads/2021/11/DSC9262-P2.png', label: 'Sala principal' },
-  { src: 'https://umbral.co/wp-content/uploads/2021/11/laurel-internas-22-1.jpg', label: 'Cocina integral' },
-  { src: 'https://umbral.co/wp-content/uploads/2021/11/DSC0980-1200x801.jpg', label: 'Habitación principal' },
+  { src: 'https://theandesadventure.com/wp-content/uploads/2026/03/santa-fe-antioquia-tours-medellin.png', label: 'Sala principal' },
+  { src: 'https://http2.mlstatic.com/D_NQ_NP_2X_690877-MCO109675798824_042026-N.webp', label: 'Cocina integral' },
+  { src: 'https://thumbs.dreamstime.com/b/patio-colonial-en-santa-fe-de-antioquia-un-encantador-con-una-fuente-vegetaci%C3%B3n-y-arquitectura-tradicional-colombia-390661135.jpg', label: 'Balcón' },
+  { src: 'https://colineal.com/cdn/shop/articles/destacado-ideas-muebles-dormitorio-principal-colineal.jpg?v=1694452774&width=2048g', label: 'Habitación principal' },
   { src: 'https://umbral.co/wp-content/uploads/2021/11/menta-interior-10.jpg', label: 'Baño completo' },
-  { src: 'https://gprovivienda.com/wp-content/uploads/2019/03/provivienda-van-gogh-modelo-D-sala-comedor-2.jpg', label: 'Balcón' },
   { src: 'https://images.ctfassets.net/8lc7xdlkm4kt/6bYolzLQSPgZawCDlHb9qr/ca35368f17fc3143fe969c9b074a73de/mint-apartamentos-barranquilla-sala.jpg', label: 'Segundo ambiente' },
-  { src: 'https://img.properati.com/eyJidWNrZXQiOiJwcmQtbGlmdWxsY29ubmVjdC1wcm9qZWN0cy1hZG1pbi1pbWFnZXMiLCJrZXkiOiJjNmNhYzQ3My04YTMwLTQzMWYtYTcxMi05NzkwZTEyYmIwZmEvYzZjYWM0NzMtOGEzMC00MzFmLWE3MTItOTc5MGUxMmJiMGZhX2Y5ZGExNzViLTdmMGQtNGVmYi04MmY0LWVlMTdlMmNhMTY2Yy5qcGciLCJicmFuZCI6InByb3BlcmF0aSIsImVkaXRzIjp7InJvdGF0ZSI6bnVsbCwicmVzaXplIjp7IndpZHRoIjo2NDAsImhlaWdodCI6NDgwLCJmaXQiOiJjb3ZlciJ9fX0=', label: 'Vista exterior' }
+
 ];
 
 
