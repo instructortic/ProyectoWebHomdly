@@ -28,7 +28,7 @@ header.innerHTML = `
 
       <!-- Logo -->
       <a href="index.html" class="logo" >
-        <img src="./assets/images/logo.png" alt="Homdly" height="45">
+        <img src="../assets/images/logo.png" alt="Homdly" height="45">
       </a>
 
       <!-- Botón hamburguesa — solo aparece en móvil -->
@@ -43,11 +43,11 @@ header.innerHTML = `
 
       <!-- Menú de navegación -->
       <nav class="nav-menu" id="navMenu">
-        <a href="index.html" class="nav-btn">Inicio</a>
-        <a href="quienesSomos.html" class="nav-btn">¿Quiénes Somos?</a>
-        <a href="anuncio.html" class="nav-btn">Propiedades</a>
-        <a href="soporte.html" class="nav-btn">Soporte</a>
-        <a href="contacto.html" class="nav-btn">Contacto</a>
+        <a href="../index.html" class="nav-btn">Inicio</a>
+        <a href="../quienesSomos.html" class="nav-btn">¿Quiénes Somos?</a>
+        <a href="../anuncio.html" class="nav-btn">Propiedades</a>
+        <a href="../soporte.html" class="nav-btn">Soporte</a>
+        <a href="../contacto.html" class="nav-btn">Contacto</a>
    
         
       
@@ -72,7 +72,7 @@ header.innerHTML = `
   
       <!-- Logo -->
       <div class="logo-Footer">
-        <img src="./assets/images/logo 50.png" alt="">
+        <img src="../assets/images/logo 50.png" alt="">
         <div class="logo-text">
           <h1>HOMDLY</h1>
         </div>
