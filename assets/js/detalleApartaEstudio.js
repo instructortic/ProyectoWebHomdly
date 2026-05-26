@@ -1,19 +1,19 @@
 //array con las 7 fotos de la propiedad
 // Cada objeto tiene:URL de la imagen
 const fotos = [
-  { src: 'assets/images/anuncio014/aparta03.jpg', label:'apartaestudio'},
+  { src: '../assets/images/anuncio014/aparta03.jpg', label:'apartaestudio'},
 
-  { src: 'assets/images/anuncio014/aparta022.jpg', label:'cocina' },
+  { src: '../assets/images/anuncio014/aparta022.jpg', label:'cocina' },
 
-  { src: 'assets/images/anuncio014/aparta055.jpg', label:'cocina frontal' },
+  { src: '../assets/images/anuncio014/aparta055.jpg', label:'cocina frontal' },
 
-  { src: 'assets/images/anuncio014/apart04.jpg', label:'closet' },
+  { src: '../assets/images/anuncio014/apart04.jpg', label:'closet' },
 
-  { src: 'assets/images/anuncio014/aparta061.jpg', label:'baño completo'},
+  { src: '../assets/images/anuncio014/aparta061.jpg', label:'baño completo'},
 
-  { src: 'assets/images/anuncio014/apart013.jpg', label:'ducha'},
+  { src: '../assets/images/anuncio014/apart013.jpg', label:'ducha'},
 
-  { src: 'assets/images/anuncio014/apa033.webp', label:'habitacion'},
+  { src: '../assets/images/anuncio014/apa033.webp', label:'habitacion'},
 
 
 ];
