@@ -1,13 +1,13 @@
 //array con las 7 fotos de la propiedad
 // Cada objeto tiene:URL de la imagen
 const fotos = [
-  { src: 'https://umbral.co/wp-content/uploads/2021/11/DSC9262-P2.png', label: 'Sala principal' },
-  { src: 'https://umbral.co/wp-content/uploads/2021/11/laurel-internas-22-1.jpg', label: 'Cocina integral' },
-  { src: 'https://umbral.co/wp-content/uploads/2021/11/DSC0980-1200x801.jpg', label: 'Habitación principal' },
-  { src: 'https://umbral.co/wp-content/uploads/2021/11/menta-interior-10.jpg', label: 'Baño completo' },
-  { src: 'https://gprovivienda.com/wp-content/uploads/2019/03/provivienda-van-gogh-modelo-D-sala-comedor-2.jpg', label: 'Balcón' },
-  { src: 'https://images.ctfassets.net/8lc7xdlkm4kt/6bYolzLQSPgZawCDlHb9qr/ca35368f17fc3143fe969c9b074a73de/mint-apartamentos-barranquilla-sala.jpg', label: 'Segundo ambiente' },
-  { src: 'https://img.properati.com/eyJidWNrZXQiOiJwcmQtbGlmdWxsY29ubmVjdC1wcm9qZWN0cy1hZG1pbi1pbWFnZXMiLCJrZXkiOiJjNmNhYzQ3My04YTMwLTQzMWYtYTcxMi05NzkwZTEyYmIwZmEvYzZjYWM0NzMtOGEzMC00MzFmLWE3MTItOTc5MGUxMmJiMGZhX2Y5ZGExNzViLTdmMGQtNGVmYi04MmY0LWVlMTdlMmNhMTY2Yy5qcGciLCJicmFuZCI6InByb3BlcmF0aSIsImVkaXRzIjp7InJvdGF0ZSI6bnVsbCwicmVzaXplIjp7IndpZHRoIjo2NDAsImhlaWdodCI6NDgwLCJmaXQiOiJjb3ZlciJ9fX0=', label: 'Vista exterior' }
+  { src: 'assets/images/Img012/1.jpeg', label: 'Principal' },
+  { src: 'assets/images/Img012/2.jpeg', label: 'Medidas' },
+  { src: 'assets/images/Img012/3.jpeg', label: 'Medidas desde arriba' },
+  { src: 'assets/images/Img012/4.jpeg', label: 'Derecha abajo' },
+  { src: 'assets/images/Img012/5.jpeg', label: 'Derecha arriba' },
+  { src: 'assets/images/Img012/6.jpeg', label: 'Desde el frente' },
+  { src: 'assets/images/Img012/7.jpeg', label: 'Desde atras' }
 ];
 
 
