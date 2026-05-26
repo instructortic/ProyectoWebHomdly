@@ -99,7 +99,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-<<<<<<< HEAD
  /*  // ── Botón "Ver Detalle": abre modal de registro ──
   document.querySelectorAll('.btn-detail').forEach(btn => {
 =======
@@ -125,13 +124,12 @@ document.addEventListener('DOMContentLoaded', () => {
 <<<<<<< HEAD
   }); */
 
-=======
+/* 
   });
  *
->>>>>>> instructortic
   // Carga inicial: mostrar solo arriendos
   buscar();
-});
+}); */
 
 /* // agregar función para el mensaje de "registro requerido" Carolina
 // ── Funciones del modal ───────────────────────────────
@@ -156,10 +154,4 @@ document.addEventListener('keydown', e => {
 
 // Redirecciones
 function irARegistro() { window.location.href = 'index.html?login=1&panel=registro'; }
-function irALogin()     { window.location.href = 'index.html?login=1&panel=login'; }
-<<<<<<< HEAD
- */
-=======
-
- */
->>>>>>> instructortic
+function irALogin()     { window.location.href = 'index.html?login=1&panel=login'; }*/
