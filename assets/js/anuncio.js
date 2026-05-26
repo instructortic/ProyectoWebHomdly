@@ -96,7 +96,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-<<<<<<< HEAD
   // // ── Botón "Ver Detalle": abre modal de registro ──
   // document.querySelectorAll('.btn-detail').forEach(btn => {
   //   btn.addEventListener('click', e => {
@@ -105,6 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
   //     abrirModal();
   //   });
   // });
+
 
 =======
   // ── Botón "Ver Detalle": abre modal de registro ──
@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
   buscar();
 });
 
-// agregar función para el mensaje de "registro requerido" Carolina
+/* // agregar función para el mensaje de "registro requerido" Carolina
 // ── Funciones del modal ───────────────────────────────
 /* function abrirModal() {
   document.getElementById('overlay').classList.add('show');
