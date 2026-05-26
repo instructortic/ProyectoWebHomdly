@@ -1,13 +1,14 @@
 //array con las 7 fotos de la propiedad
 // Cada objeto tiene:URL de la imagen
 const fotos = [
-  { src: 'https://umbral.co/wp-content/uploads/2021/11/DSC9262-P2.png', label: 'Sala principal' },
-  { src: 'https://umbral.co/wp-content/uploads/2021/11/laurel-internas-22-1.jpg', label: 'Cocina integral' },
-  { src: 'https://umbral.co/wp-content/uploads/2021/11/DSC0980-1200x801.jpg', label: 'Habitación principal' },
-  { src: 'https://umbral.co/wp-content/uploads/2021/11/menta-interior-10.jpg', label: 'Baño completo' },
-  { src: 'https://gprovivienda.com/wp-content/uploads/2019/03/provivienda-van-gogh-modelo-D-sala-comedor-2.jpg', label: 'Balcón' },
-  { src: 'https://images.ctfassets.net/8lc7xdlkm4kt/6bYolzLQSPgZawCDlHb9qr/ca35368f17fc3143fe969c9b074a73de/mint-apartamentos-barranquilla-sala.jpg', label: 'Segundo ambiente' },
-  { src: 'https://img.properati.com/eyJidWNrZXQiOiJwcmQtbGlmdWxsY29ubmVjdC1wcm9qZWN0cy1hZG1pbi1pbWFnZXMiLCJrZXkiOiJjNmNhYzQ3My04YTMwLTQzMWYtYTcxMi05NzkwZTEyYmIwZmEvYzZjYWM0NzMtOGEzMC00MzFmLWE3MTItOTc5MGUxMmJiMGZhX2Y5ZGExNzViLTdmMGQtNGVmYi04MmY0LWVlMTdlMmNhMTY2Yy5qcGciLCJicmFuZCI6InByb3BlcmF0aSIsImVkaXRzIjp7InJvdGF0ZSI6bnVsbCwicmVzaXplIjp7IndpZHRoIjo2NDAsImhlaWdodCI6NDgwLCJmaXQiOiJjb3ZlciJ9fX0=', label: 'Vista exterior' }
+  { src: 'assets/images/imgAnuncio/anuncio_nro_18/Fachada_018.png', label: 'Fachada' },
+  { src: 'assets/images/imgAnuncio/anuncio_nro_18/Ingreso_018.png', label: 'Ingreso' },
+  { src: 'assets/images/imgAnuncio/anuncio_nro_18/Fondo_018.png', label: 'Fondo' },
+  { src: 'assets/images/imgAnuncio/anuncio_nro_18/Puerta_018.png', label: 'Puerta' },
+  { src: 'assets/images/imgAnuncio/anuncio_nro_18/Bano_018.png', label: 'Baño' },
+  { src: 'assets/images/imgAnuncio/anuncio_nro_18/Bodega_018.png', label: 'Bodega' },
+  { src: 'assets/images/imgAnuncio/anuncio_nro_18/Interior_lleno_018.png', label: 'Interior_Lleno' },
+  { src: 'assets/images/imgAnuncio/anuncio_nro_18/Fachada_Nocturno_018.png', label: 'Vista exterior_Nocturna' }
 ];
 
 
@@ -201,4 +202,25 @@ modalOverlay.addEventListener('click', e => {
   if (e.target === modalOverlay) closeModal();
 });
 
+
+
+//Boton mostrar todo
+function mostrarTodo() {
+  // Reiniciar selects
+  document.getElementById("dep").value = "";
+  document.getElementById("mun").value = "";
+  document.getElementById("barrio").value = "";
+  document.getElementById("tipo").value = "";
+  document.getElementById("codigo").value = "";
+
+  // Mostrar todas las tarjetas
+  const cards = document.querySelectorAll(".property-card");
+
+  cards.forEach(card => {
+    card.style.display = "block";
+  });
+
+  // Ocultar mensaje de no resultados
+  document.getElementById("noResults").style.display = "none";
+}
 
