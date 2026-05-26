@@ -1,5 +1,6 @@
 //array con las 7 fotos de la propiedad
 // Cada objeto tiene:URL de la imagen
+<<<<<<< HEAD:assets/js/detalle001.js
 const fotos = [
   { src: "assets/images/imgAnuncio001/1.jpeg", label: 'Sala principal' },
   { src: "assets/images/imgAnuncio001/2.jpeg", label: 'Cocina integral' },
@@ -9,6 +10,9 @@ const fotos = [
   { src: 'https://images.ctfassets.net/8lc7xdlkm4kt/6bYolzLQSPgZawCDlHb9qr/ca35368f17fc3143fe969c9b074a73de/mint-apartamentos-barranquilla-sala.jpg', label: 'Segundo ambiente' },
   { src: 'https://img.properati.com/eyJidWNrZXQiOiJwcmQtbGlmdWxsY29ubmVjdC1wcm9qZWN0cy1hZG1pbi1pbWFnZXMiLCJrZXkiOiJjNmNhYzQ3My04YTMwLTQzMWYtYTcxMi05NzkwZTEyYmIwZmEvYzZjYWM0NzMtOGEzMC00MzFmLWE3MTItOTc5MGUxMmJiMGZhX2Y5ZGExNzViLTdmMGQtNGVmYi04MmY0LWVlMTdlMmNhMTY2Yy5qcGciLCJicmFuZCI6InByb3BlcmF0aSIsImVkaXRzIjp7InJvdGF0ZSI6bnVsbCwicmVzaXplIjp7IndpZHRoIjo2NDAsImhlaWdodCI6NDgwLCJmaXQiOiJjb3ZlciJ9fX0=', label: 'Vista exterior' }
 ];
+=======
+const fotos = JSON.parse(document.getElementById('galeria').dataset.fotos);
+>>>>>>> wtorres:assets/js/detalle.js
 
 
 //  variables que recuerdan en qué foto estamos
