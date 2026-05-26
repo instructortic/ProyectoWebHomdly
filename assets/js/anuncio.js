@@ -96,22 +96,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ── Botón "Ver Detalle": abre modal de registro ──
-/*   document.querySelectorAll('.btn-detail').forEach(btn => {
-    btn.addEventListener('click', e => {
-      e.preventDefault();      // evita que el <a> navegue
-      e.stopPropagation();     // evita que seleccione la card
-      abrirModal();
-    });
-  });
- */
+  // // ── Botón "Ver Detalle": abre modal de registro ──
+  // document.querySelectorAll('.btn-detail').forEach(btn => {
+  //   btn.addEventListener('click', e => {
+  //     e.preventDefault();      // evita que el <a> navegue
+  //     e.stopPropagation();     // evita que seleccione la card
+  //     abrirModal();
+  //   });
+  // });
+
   // Carga inicial: mostrar solo arriendos
   buscar();
 });
 
 // agregar función para el mensaje de "registro requerido" Carolina
 // ── Funciones del modal ───────────────────────────────
-/* function abrirModal() {
+function abrirModal() {
   document.getElementById('overlay').classList.add('show');
   document.body.style.overflow = 'hidden';
 }
@@ -133,4 +133,4 @@ document.addEventListener('keydown', e => {
 // Redirecciones
 function irARegistro() { window.location.href = 'index.html?login=1&panel=registro'; }
 function irALogin()     { window.location.href = 'index.html?login=1&panel=login'; }
- */
+
