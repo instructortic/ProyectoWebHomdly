@@ -96,6 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+
 /*   // ── Botón "Ver Detalle": abre modal de registro ──
   document.querySelectorAll('.btn-detail').forEach(btn => {
     btn.addEventListener('click', e => {
@@ -105,6 +106,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
  */
+
+  // // ── Botón "Ver Detalle": abre modal de registro ──
+  // document.querySelectorAll('.btn-detail').forEach(btn => {
+  //   btn.addEventListener('click', e => {
+  //     e.preventDefault();      // evita que el <a> navegue
+  //     e.stopPropagation();     // evita que seleccione la card
+  //     abrirModal();
+  //   });
+  // });
+
+
   // Carga inicial: mostrar solo arriendos
   buscar();
 });
