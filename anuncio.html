@@ -40,7 +40,7 @@
         <!-- ===== TABS ===== -->
         <div class="tabs">
           <button class="tab active" data-tab="arriendo" onclick="setTab(this)">Arriendos</button>
-          <button class="tab tab-compra" data-tab="compra" onclick="setTab(this)">Compra</button>          
+          <button class="tab tab-compra" data-tab="compra" onclick="setTab(this)">Compra</button>                    
         </div>
 
         <!-- ===== FILTROS ===== -->
@@ -49,7 +49,6 @@
             <select id="dep" onchange="actualizarMunicipios()">
               <option value="">Departamentos</option>
               <option>Antioquia</option>
-              <option>Cundinamarca</option>
             </select>
           </div>
           <div class="filter-select">
@@ -83,6 +82,180 @@
         <!-- ===== GRID ===== -->
         <div class="properties-grid" id="propertiesGrid">
 
+          <!-- CARD 1 – Lote / Venta -->
+          <div class="property-card" data-modalidad="arriendo" data-dep="Antioquia" data-mun="Bogotá" data-barrio="Chapinero" data-tipo="Apartamento">
+            <div class="card-image">
+              <img src="assets/images/imgAnuncio/apartamentoN.V.png" alt="Apartamento">
+              <span class="badge badge-alquiler">Alquiler</span>
+              <button class="btn-favorite" aria-label="Favorito"><span class="material-symbols-rounded">favorite</span></button>
+            </div>
+            <div class="card-body">
+              <div class="card-header-row">
+                <h3 class="property-type">Apartamento</h3>
+                <span class="property-code">cod:001</span>
+              </div>
+              <p class="property-location"><span class="material-symbols-rounded">location_on</span>Sta Fe de Ant, Llano de Bolívar</p>
+              <div class="card-divider"></div>
+              <div class="property-specs">
+                <div class="spec-item"><span class="material-symbols-rounded">straighten</span><span>47 m²</span></div>
+                <div class="spec-item"><span class="material-symbols-rounded">bed</span><span>2 hab</span></div>
+                <div class="spec-item"><span class="material-symbols-rounded">shower</span><span>2 baños</span></div>
+                <div class="spec-item"><span class="material-symbols-rounded">garage_home</span><span>No</span></div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <span class="property-price">$ 900.000</span>
+              <a href="detalle001.html" class="btn-detail">Ver Detalle</a>
+            </div>
+          </div>
+
+
+
+
+          <!-- CARD 7 – casa / Venta -->
+            <div class="property-card">
+              <div class="card-image">
+                <img src="./assets/images/imgCasa007/02.jpg" alt="Casa">
+                <span class="badge badge-venta">Venta</span>
+                <button class="btn-favorite" aria-label="Favorito">
+                  <span class="material-symbols-rounded">favorite</span>
+                </button>
+              </div>
+              <div class="card-body">
+                <div class="card-header-row">
+                  <h3 class="property-type">Casa</h3>
+                  <span class="property-code">cod:007</span>
+                </div>
+
+                <p class="property-location">
+                  <span class="material-symbols-rounded">location_on</span>
+                  Sta Fe de Ant, San Pedro
+                </p>
+
+                <div class="card-divider"></div>
+                <div class="property-specs">
+                  <div class="spec-item">
+                    <span class="material-symbols-rounded">straighten</span>
+                    <span>120 m²</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="material-symbols-rounded">bed</span>
+                    <span>4 hab</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="material-symbols-rounded">shower</span>
+                    <span>3 baños</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="material-symbols-rounded">garage_home</span>
+                    <span>Si</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer">
+                <span class="property-price">$ 320.000.000</span>
+                <a href="detalle_casa_007.html" class="btn-detail">Ver Detalle</a>
+              </div>
+            </div>
+
+
+              <!-- CARD 1 – Lote / Venta -->
+          <div class="property-card"> <!-- lo principal para crear el anuncio ya que es la e-card -->
+            <div class="card-image">
+              <img src="img_009/lote1.png" alt="Lote">
+              <span class="badge badge-venta">Venta</span>
+              <button class="btn-favorite" aria-label="Favorito">
+                <span class="material-symbols-rounded">favorite</span>
+              </button>
+            </div>
+            <div class="card-body">
+              <div class="card-header-row">
+                <h3 class="property-type">Lote</h3>
+                <span class="property-code">cod:009</span>
+              </div>
+              <p class="property-location">
+                <span class="material-symbols-rounded">location_on</span>
+                Sta Fe de Ant, El Espinal
+              </p>
+              <div class="card-divider"></div>
+              <div class="property-specs">
+                <div class="spec-item">
+                  <span class="material-symbols-rounded">straighten</span>
+                  <span>500 m²</span>
+                  
+                </div>
+              </div>
+              
+              <p class="property-desc">Descubra la vida urbana en su maxima expresion con este espectacular lote a estrenar ubicado en Santa Fe ...</p>
+            </div>
+            <div class="card-footer">
+              <span class="property-price">$ 15.000.000</span>
+              <a href="detalle_009.html" class="btn-detail">Ver Detalle</a>
+              
+               
+            </div>
+          </div>
+
+
+
+
+
+
+          <!-- CARD 017 – Local Comercial / Alquiler -->
+          <div class="property-card" data-modalidad="arriendo" data-dep="Antioquia" data-mun="Santa fe de antioquia" data-barrio="Llano de bolivar" data-tipo="Local comercial">
+            <div class="card-image">
+              <img src="assets/images/imgAnuncio/anuncio_nro_17/Fachada_017.png" alt="Casa">
+              <span class="badge badge-alquiler">Alquiler</span>
+              <button class="btn-favorite" aria-label="Favorito"><span class="material-symbols-rounded">favorite</span></button>
+            </div>
+            <div class="card-body">
+              <div class="card-header-row">
+                <h3 class="property-type">Local Comercial</h3>
+                <span class="property-code">cod:017</span>
+              </div>
+              <p class="property-location"><span class="material-symbols-rounded">location_on</span>Sta Fe de Ant, Llano de Bolivar</p>
+              <div class="card-divider"></div>
+              <div class="property-specs">
+                <div class="spec-item"><span class="material-symbols-rounded">straighten</span><span>400 m²</span></div>
+                <!--<div class="spec-item"><span class="material-symbols-rounded">bed</span><span>3 hab</span></div>-->
+                <div class="spec-item"><span class="material-symbols-rounded">wc</span><span>2 Baños</span></div>
+              <div class="spec-item"><span class="material-symbols-rounded">local_parking</span><span>Si</span></div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <span class="property-price">$ 7.000.000</span>
+              <a href="detalle_017.html" class="btn-detail">Ver Detalle</a>
+            </div>
+          </div>
+
+          
+
+          <!-- CARD 018 – Local Comercial / Venta -->
+          <div class="property-card" data-modalidad="arriendo" data-dep="Antioquia" data-mun="Santa fe de antioquia" data-barrio="La chinca" data-tipo="Local comercial">
+            <div class="card-image">
+              <img src="assets/images/imgAnuncio/anuncio_nro_18/Fachada_018.png" alt="Local comercial">
+              <span class="badge badge-alquiler">Alquiler</span>
+              <button class="btn-favorite" aria-label="Favorito"><span class="material-symbols-rounded">favorite</span></button>
+            </div>
+            <div class="card-body">
+              <div class="card-header-row">
+                <h3 class="property-type">Local Comercial</h3>
+                <span class="property-code">cod:018</span>
+              </div>
+              <p class="property-location"><span class="material-symbols-rounded">location_on</span>Sta Fe de Ant, La chinca</p>
+              <div class="card-divider"></div>
+              <div class="property-specs">
+                <div class="spec-item"><span class="material-symbols-rounded">straighten</span><span>150 m²</span></div>
+                <!--<div class="spec-item"><span class="material-symbols-rounded">bed</span><span>1 hab</span></div>-->
+                <div class="spec-item"><span class="material-symbols-rounded">wc</span><span>2 Baños</span></div>
+                <div class="spec-item"><span class="material-symbols-rounded">local_parking</span><span>No</span></div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <span class="property-price">$ 3.000.000</span>
+              <a href="detalle_018.html" class="btn-detail">Ver Detalle</a>
+            </div>
+          </div>
           
 
           <!-- CARD 019 – Local Comercial / Alquiler -->
