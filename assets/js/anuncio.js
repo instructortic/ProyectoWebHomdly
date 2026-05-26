@@ -9,7 +9,7 @@ const municipiosData = {
 };
 
 // ── Estado del tab activo (arriendo | compra) ─────────
-let tabActual = "arriendo";
+let tabActual = "compra";
 
 
 // ── setTab: cambia el tab activo y filtra ─────────────
@@ -99,6 +99,14 @@ document.addEventListener('DOMContentLoaded', () => {
   // ── Botón "Ver Detalle": abre modal de registro ──
   document.querySelectorAll('.btn-detail').forEach(btn => {
     btn.addEventListener('click', e => {
+      // Si es un enlace que apunta a la página de detalle, permitir navegación
+      var href = btn.getAttribute && btn.getAttribute('href');
+      if (href && href.indexOf('detalle-apartaestudio13.html') !== -1) {
+        try { sessionStorage.setItem('showAllOnReturn', '1'); } catch (err) {}
+        // dejar que el navegador siga el enlace
+        return;
+      }
+      // caso por defecto: abrir modal de registro
       e.preventDefault();      // evita que el <a> navegue
       e.stopPropagation();     // evita que seleccione la card
       abrirModal();
