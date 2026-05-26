@@ -271,13 +271,24 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
 }
 .agente-side  { display: flex; align-items: center; gap: 8px; }
 .agente-avatar {
-  width: 38px; height: 38px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
   overflow: hidden;
   flex-shrink: 0;
   border: 2px solid var(--border);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.agente-avatar img { width: 100%; height: 100%; object-fit: cover; }
+.agente-avatar img{ 
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+ }
 .agente-nombre { font-size: 12px; font-weight: 600; }
 
 .contact-side  { display: flex; flex-direction: column; align-items: flex-end; gap: 5px; }
