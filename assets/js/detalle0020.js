@@ -1,13 +1,13 @@
 //array con las 7 fotos de la propiedad
 // Cada objeto tiene:URL de la imagen
 const fotos = [
-  { src: '/assets/images/imgAnuncio/HOTEL1.jpg', label: 'Sala principal' },
-  { src: '/assets/images/imgDetalle/HabitacionHotel1.jpg', label: 'Cocina integral' },
-  { src: '/assets/images/imgDetalle/HabitacionHotel1Foto2.jpg', label: 'Habitación principal' },
-  { src: '/assets/images/imgDetalle/HabitacionHotel1Foto3.jpg', label: 'Baño completo' },
-  { src: '/assets/images/imgDetalle/HabitacionHotel1Foto4.jpg', label: 'Balcón' },
-  { src: '/assets/images/imgDetalle/HabitacionHotel1Foto5.jpg', label: 'Segundo ambiente' },
-  { src: '/assets/images/imgDetalle/HabitacionHotel1Foto6.jpg', label: 'Vista exterior' }
+  { src: '/assets/images/imgDetalle0020y0021/HOTEL1.jpg', label: 'Sala principal' },
+  { src: '/assets/images/imgDetalle0020y0021/HabitacionHotel1.jpg', label: 'Cocina integral' },
+  { src: '/assets/images/imgDetalle0020y0021/HabitacionHotel1Foto2.jpg', label: 'Habitación principal' },
+  { src: '/assets/images/imgDetalle0020y0021/HabitacionHotel1Foto3.jpg', label: 'Baño completo' },
+  { src: '/assets/images/imgDetalle0020y0021/HabitacionHotel1Foto4.jpg', label: 'Balcón' },
+  { src: '/assets/images/imgDetalle0020y0021/HabitacionHotel1Foto5.jpg', label: 'Segundo ambiente' },
+  { src: '/assets/images/imgDetalle0020y0021/HabitacionHotel1Foto6.jpg', label: 'Vista exterior' }
 ];
 
 
