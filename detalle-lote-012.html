@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Homdly – Lote Membrillala</title>
+  <title>Homdly – Lote La Membrillala</title>
 
-  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="shortcut icon" href="./assets/images/iconoLogo.ico" type="image/svg+xml">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,295 +14,570 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/styleFooter.css">
   <link rel="stylesheet" href="./assets/css/detalle.css">
+  <link rel="stylesheet" href="./assets/css/filtroL.css">
 </head>
 <body>
 
-<!-- ═══════════════════════════════════════════════════════════════════════════
-     MODAL GALERÍA  (estructura fija, igual en todos los detalles)
-════════════════════════════════════════════════════════════════════════════ -->
-<div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true">
-  <div class="modal-box">
-    <div class="modal-header">
-      <div>
-        <div class="modal-title">Galería de fotos</div>
-        <div class="modal-counter-text" id="modalCounterText">1 / 7</div>
+  <header class="header"></header>
+
+  <!-- MODAL GALERÍA -->
+  <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div>
+          <div class="modal-title">Galería de fotos</div>
+          <div class="modal-counter-text" id="modalCounterText">1 / 7</div>
+        </div>
+        <button class="modal-close-btn" id="modalClose">✕</button>
       </div>
-      <button class="modal-close-btn" id="modalClose">✕</button>
-    </div>
-    <div class="modal-main-img">
-      <img id="modalMainImg" src="" alt="Foto">
-      <div class="modal-nav">
-        <button class="modal-nav-btn" id="modalPrev">&#8592;</button>
-        <button class="modal-nav-btn" id="modalNext">&#8594;</button>
+      <div class="modal-main-img">
+        <img id="modalMainImg" src="" alt="Foto">
+        <div class="modal-nav">
+          <button class="modal-nav-btn" id="modalPrev">&#8592;</button>
+          <button class="modal-nav-btn" id="modalNext">&#8594;</button>
+        </div>
       </div>
+      <div class="modal-thumbs" id="modalThumbs"></div>
     </div>
-    <div class="modal-thumbs" id="modalThumbs"></div>
-  </div>
-</div>
-
-
-<!-- ═══════════════════════════════════════════════════════════════════════════
-     PÁGINA Jmadrid
-════════════════════════════════════════════════════════════════════════════ -->
-<div class="page">
-
-  <div class="page-close-row">
-    <a href="anuncio.html" class="btn-back">
-      <i class="fa-solid fa-arrow-left"></i> Volver
-    </a>
   </div>
 
-  <!-- ── FILA SUPERIOR: Galería + Tarjeta info ─────────────────────────── -->
-  <div class="top-row">
+  <section class="filtroLateral">
+    <div class="layout">
 
-    <!-- GALERÍA
-         ▸ data-fotos  → array JSON con {src, label} de cada foto
-         El JS lee este atributo; no hay ningún array en el .js
-    -->
-    <div class="gallery-col">
-      <div class="gallery-grid">
-
-        <div class="main-img-wrap" id="mainImgWrap">
-          <span class="badge-alquiler">Venta</span>
-          <img id="mainImg" src="" alt="Imagen principal">
-          <div class="img-counter" id="imgCounter">1 / 7</div>
+      <!-- SIDEBAR -->
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+          <span class="sidebar-title">HOMDLY</span>
+          <button class="clear-btn" onclick="clearFilters()">Limpiar todo</button>
         </div>
 
-        <!--
-          ╔══════════════════════════════════════════════════════════╗
-          ║  AQUÍ VAN LAS FOTOS  ←  cambia solo esto en cada HTML  ║
-          ╚══════════════════════════════════════════════════════════╝
-          id="galeria"   → solo guarda el JSON, display:none, no se ve
-          id="thumbsCol" → contenedor visual donde el JS pinta las miniaturas
-        -->
-        <div id="galeria">
-  <img src="assets/images/Img012/1.jpeg"   alt="Principal">
-  <img src="assets/images/Img012/2.jpeg"      alt="Cocina integral">
-  <img src="assets/images/Img012/3.jpeg"  alt="Habitación principal">
-  <img src="assets/images/Img012/4.jpeg"        alt="Baño completo">
-  <img src="assets/images/Img012/5.jpeg"      alt="Balcón">
-  <img src="assets/images/Img012/6.jpeg"   alt="Segundo ambiente">
-  <img src="assets/images/Img012/7.jpeg"    alt="Vista exterior">
-</div>
+        <div class="sidebar-body" id="sidebarBody">
 
-        <div class="thumbs-col" id="thumbsCol"></div>
-        <!-- /galeria -->
+          <div class="filter-section">
+            <div class="filter-label" onclick="toggleSection(this)">
+              Tipo de Accion
+              <svg class="chevron" width="12" height="12" viewBox="0 0 12 12"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="filter-content">
+              <div class="radio-pills">
+                <input type="radio" name="operacion" id="op-arriendo" class="pill-input" checked>
+                <label for="op-arriendo" class="pill-label">Arriendo</label>
+                <input type="radio" name="operacion" id="op-venta" class="pill-input">
+                <label for="op-venta" class="pill-label">Venta</label>
+              </div>
+            </div>
+          </div>
 
-      </div>
+          <div class="filter-section">
+            <div class="filter-label" onclick="toggleSection(this)">
+              Tipo de Propiedad
+              <svg class="chevron" width="12" height="12" viewBox="0 0 12 12"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="filter-content">
+              <div class="check-group">
+                <label class="check-item"><input type="checkbox" checked> <span class="check-label">Casa</span></label>
+                <label class="check-item"><input type="checkbox"> <span class="check-label">Apartamento</span></label>
+                <label class="check-item"><input type="checkbox"> <span class="check-label">Lote</span></label>
+                <label class="check-item"><input type="checkbox"> <span class="check-label">Local Comercial</span></label>
+                <label class="check-item"><input type="checkbox"> <span class="check-label">Finca</span></label>
+                <label class="check-item"><input type="checkbox"> <span class="check-label">Bodega</span></label>
+              </div>
+            </div>
+          </div>
 
-      <div class="below-gallery">
-        <span class="codigo-text">Código: 012</span>
-        <div class="gallery-actions">
-          <button class="action-link">&#9825; Guardar</button>
-          <button class="action-link">&#10548; Compartir</button>
+          <div class="filter-section">
+            <div class="filter-label" onclick="toggleSection(this)">
+              Características adicionales
+              <svg class="chevron" width="12" height="12" viewBox="0 0 12 12"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="filter-content">
+              <div class="check-group">
+                <label class="check-item"><input type="checkbox"> <span class="check-label">Parqueadero</span></label>
+                <label class="check-item"><input type="checkbox"> <span class="check-label">Piscina</span></label>
+                <label class="check-item"><input type="checkbox"> <span class="check-label">Balcón / Terraza</span></label>
+                <label class="check-item"><input type="checkbox"> <span class="check-label">Ascensor</span></label>
+                <label class="check-item"><input type="checkbox"> <span class="check-label">Closet</span></label>
+                <label class="check-item"><input type="checkbox"> <span class="check-label">Pago de administración</span></label>
+                <label class="check-item"><input type="checkbox"> <span class="check-label">Cámaras de seguridad</span></label>
+                <label class="check-item"><input type="checkbox"> <span class="check-label">Tina</span></label>
+              </div>
+            </div>
+          </div>
+
+          <div class="filter-section">
+            <div class="filter-label" onclick="toggleSection(this)">
+              Rango de Precio
+              <svg class="chevron" width="12" height="12" viewBox="0 0 12 12"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="filter-content">
+              <div class="price-row">
+                <input type="text" class="price-input" id="minPrice" placeholder="Mín" value="500.000">
+                <span class="price-sep">–</span>
+                <input type="text" class="price-input" id="maxPrice" placeholder="Máx" value="5.000.000">
+              </div>
+              <div class="range-wrap">
+                <div class="range-track"></div>
+                <div class="range-fill" id="rangeFill"></div>
+                <input type="range" id="rangeMin" min="0" max="10000000" step="100000" value="500000">
+                <input type="range" id="rangeMax" min="0" max="10000000" step="100000" value="5000000">
+              </div>
+            </div>
+          </div>
+
+          <div class="filter-section">
+            <div class="filter-label" onclick="toggleSection(this)">
+              Habitaciones y Baños
+              <svg class="chevron" width="12" height="12" viewBox="0 0 12 12"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="filter-content">
+              <div style="margin-bottom:12px">
+                <div style="font-size:12px;color:var(--muted);margin-bottom:8px;font-weight:500">Habitaciones</div>
+                <div class="radio-pills">
+                  <input type="radio" name="hab" id="h-1" class="pill-input" checked>
+                  <label for="h-1" class="pill-label">1</label>
+                  <input type="radio" name="hab" id="h-2" class="pill-input">
+                  <label for="h-2" class="pill-label">2</label>
+                  <input type="radio" name="hab" id="h-3" class="pill-input">
+                  <label for="h-3" class="pill-label">3</label>
+                  <input type="radio" name="hab" id="h-4" class="pill-input">
+                  <label for="h-4" class="pill-label">4+</label>
+                </div>
+              </div>
+              <div>
+                <div style="font-size:12px;color:var(--muted);margin-bottom:8px;font-weight:500">Baños</div>
+                <div class="radio-pills">
+                  <input type="radio" name="banos" id="b-1" class="pill-input" checked>
+                  <label for="b-1" class="pill-label">1</label>
+                  <input type="radio" name="banos" id="b-2" class="pill-input">
+                  <label for="b-2" class="pill-label">2</label>
+                  <input type="radio" name="banos" id="b-3" class="pill-input">
+                  <label for="b-3" class="pill-label">3</label>
+                  <input type="radio" name="banos" id="b-4" class="pill-input">
+                  <label for="b-4" class="pill-label">4+</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="filter-section">
+            <div class="filter-label" onclick="toggleSection(this)">
+              📐 Área (m²)
+              <svg class="chevron" width="12" height="12" viewBox="0 0 12 12"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="filter-content">
+              <div class="area-inputs">
+                <input type="text" class="price-input" placeholder="Mín m²">
+                <span class="price-sep">–</span>
+                <input type="text" class="price-input" placeholder="Máx m²">
+              </div>
+              <div style="margin-top:10px">
+                <div class="radio-pills">
+                  <input type="radio" name="area" id="a-any" class="pill-input" checked><label for="a-any" class="pill-label">Cualquier</label>
+                  <input type="radio" name="area" id="a-50" class="pill-input"><label for="a-50" class="pill-label">-50</label>
+                  <input type="radio" name="area" id="a-100" class="pill-input"><label for="a-100" class="pill-label">50–100</label>
+                  <input type="radio" name="area" id="a-200" class="pill-input"><label for="a-200" class="pill-label">100–200</label>
+                  <input type="radio" name="area" id="a-200p" class="pill-input"><label for="a-200p" class="pill-label">+200</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="filter-section">
+            <div class="filter-label" onclick="toggleSection(this)">
+              Estrato
+              <svg class="chevron" width="12" height="12" viewBox="0 0 12 12"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="filter-content">
+              <div class="radio-pills">
+                <input type="radio" name="estrato" id="e-1" class="pill-input" checked><label for="e-1" class="pill-label">1</label>
+                <input type="radio" name="estrato" id="e-2" class="pill-input"><label for="e-2" class="pill-label">2</label>
+                <input type="radio" name="estrato" id="e-3" class="pill-input"><label for="e-3" class="pill-label">3</label>
+                <input type="radio" name="estrato" id="e-4" class="pill-input"><label for="e-4" class="pill-label">4</label>
+                <input type="radio" name="estrato" id="e-5" class="pill-input"><label for="e-5" class="pill-label">5</label>
+              </div>
+            </div>
+          </div>
+
+          <button class="apply-btn">Aplicar Filtros</button>
+
         </div>
-      </div>
+      </aside>
+
+      <!-- CONTENIDO PRINCIPAL -->
+      <div class="page">
+
+        <div class="page-close-row">
+          <a href="anuncio.html" class="btn-back">
+            <i class="fa-solid fa-arrow-left"></i> Volver
+          </a>
+        </div>
+
+        <div class="top-row">
+
+          <div class="gallery-col">
+            <div class="gallery-grid">
+              <div class="main-img-wrap" id="mainImgWrap">
+                <span class="badge-alquiler">Venta</span>
+                <img id="mainImg" src="" alt="Imagen principal">
+                <div class="img-counter" id="imgCounter">1 / 7</div>
+              </div>
+
+              <div id="galeria" style="display:none"
+                data-fotos='[
+                  {"src":"assets/images/Img012/1.jpeg", "label":"Vista aérea"},
+                  {"src":"assets/images/Img012/1.jpeg", "label":"Interior del lote"},
+                  {"src":"assets/images/Img012/1.jpeg", "label":"Vista lateral"},
+                  {"src":"assets/images/Img012/1.jpeg", "label":"Esquina trasera"},
+                  {"src":"assets/images/Img012/1.jpeg", "label":"Vista cenital"},
+                  {"src":"assets/images/Img012/1.jpeg", "label":"Entrada del lote"}
+                 
+                ]'>
+              </div>
+
+              <div class="thumbs-col" id="thumbsCol"></div>
+            </div>
+
+            <div class="below-gallery">
+              <span class="codigo-text">Código: 012</span>
+              <div class="gallery-actions">
+                <button class="action-link">&#9825; Guardar</button>
+                <button class="action-link">&#10548; Compartir</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- INFO CARD -->
+          <div class="right-col">
+            <div class="info-card">
+              <h2 class="info-title">Lote en venta La Membrillala</h2>
+              <p class="info-location">&#128205; La Membrillala, Santa Fe de Antioquia</p>
+
+              <div class="info-specs">
+                <div class="info-spec"><i class="fa-solid fa-ruler-combined spec-ico"></i><span class="spec-label">1.200 m²</span></div>
+              </div>
+
+              <div class="info-price">$ 120.000.000</div>
+
+              <div class="agente-contact-row">
+                <div class="agente-side">
+                  <div class="agente-avatar">
+                    <img src="assets/images/imgInicio/JoseMadrid.png" alt="Aida">
+                  </div>
+                  <span class="agente-nombre">Jose Madrid</span>
+                </div>
+                <div class="contact-side">
+                  <span class="contactame-label">Contáctame:</span>
+                  <div class="contact-icons">
+                    <a href="https://wa.me/57300000000" class="ci ci-whatsapp" title="WhatsApp">
+                      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    </a>
+                    <a href="tel:+57300000000" class="ci ci-phone" title="Llamar">
+                      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                    </a>
+                    <a href="mailto:tatiana@homdly.co" class="ci ci-email" title="Email">
+                      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <button class="btn-visita" id="btnVisita">Solicitar una visita</button>
+            </div>
+          </div>
+
+        </div><!-- /top-row -->
+
+        <div class="page-divider"></div>
+
+        <div class="detail-section">
+          <div class="detail-left">
+            <div class="price-heading">$ 120.000.000</div>
+            <div class="prop-subtitle">
+              Lote en venta<br>
+              <span>Sta Fe de Ant, La Membrillala</span>
+            </div>
+
+            <div class="section-label">Descripción</div>
+            <div class="description">
+               <p style="text-align: justify;">Amplio lote plano de 2,830.3 m², ideal para construir la casa de tus sueños, una finca de descanso o desarrollar un proyecto campestre en un entorno tranquilo y natural.</p>
+              <p style="text-align: justify;">Cuenta con medidas aproximadas de 68.2 metros de largo por 41.5 metros de ancho, ofreciendo excelente amplitud, comodidad y privacidad para diferentes posibilidades de construcción.</p>
+                <p style="text-align: justify;">Ubicado en medio de áreas verdes, árboles y hermosos paisajes, este terreno es perfecto para disfrutar de la tranquilidad, el aire libre y una conexión permanente con la naturaleza.</p>
+            </div>
+
+            <div class="amenities-title">Características del Inmueble</div>
+            <div class="amenities-grid">
+              <div class="amenity"><div class="amenity-icon"><i class="bi bi-rulers"></i></div>Área m²</div>
+              <div class="amenity"><div class="amenity-icon"><i class="bi bi-bounding-box"></i></div>Frente/Fondo</div>
+              <div class="amenity"><div class="amenity-icon"><i class="bi bi-layers"></i></div>Topografía</div>
+              <div class="amenity"><div class="amenity-icon"><i class="bi bi-triangle"></i></div>Esquinero</div>
+              <div class="amenity"><div class="amenity-icon"><i class="bi bi-droplet"></i></div>Acueducto</div>
+              <div class="amenity"><div class="amenity-icon"><i class="bi bi-lightning-charge"></i></div>Energía</div>
+              <div class="amenity"><div class="amenity-icon"><i class="bi bi-droplet-half"></i></div>Alcantarillado</div>
+              <div class="amenity"><div class="amenity-icon"><i class="bi bi-signpost-2"></i></div>Vía pavimentada</div>
+              <div class="amenity"><div class="amenity-icon"><i class="bi bi-file-earmark-text"></i></div>Escritura</div>
+              <div class="amenity"><div class="amenity-icon"><i class="bi bi-tree"></i></div>Zona verde</div>
+            </div>
+          </div>
+
+          <div class="detail-right">
+            <div class="map-container">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31721.6!2d-75.827!3d6.5547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e468d09a3e60b31%3A0x3b25e7a7a8e0b7f!2sSanta%20Fe%20de%20Antioquia!5e0!3m2!1ses!2sco!4v1700000000000"
+                allowfullscreen loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+        </div><!-- /detail-section -->
+
+        <div class="page-divider"></div>
+
+        <div class="related-section">
+          <h3 class="related-title">Propiedades relacionadas</h3>
+          <div class="carousel-wrap">
+
+            <button class="carousel-arrow prev" id="prevBtn">
+              <i class="bi bi-chevron-left"></i>
+            </button>
+
+            <div class="carousel-track" id="carouselTrack">
+
+              <div class="listing-card">
+                <div class="card-img-wrap">
+                  <img src="assets/images/imgAnuncio/casa.jpg" alt="Casa">
+                  <span class="card-badge badge-alq">Alquiler</span>
+                  <span class="card-code">cod:4789L</span>
+                </div>
+                <div class="card-body">
+                  <div class="card-type">Casa</div>
+                  <div class="card-location"><i class="bi bi-geo-alt-fill"></i> Sta Fe de Ant, Santa Lucía</div>
+                  <div class="card-specs">
+                    <div class="card-spec"><i class="bi bi-rulers"></i> 55 m</div>
+                    <div class="card-spec"><i class="bi bi-door-open"></i> 3 hab</div>
+                    <div class="card-spec"><i class="bi bi-droplet-half"></i> 2 baños</div>
+                    <div class="card-spec"><i class="bi bi-car-front"></i> Sí</div>
+                  </div>
+                </div>
+                <div class="card-footer-related">
+                  <span class="card-price">$ 1.500.000</span>
+                  <a href="detalle.html" class="btn-detalle">Ver Detalle</a>
+                </div>
+              </div>
+
+              <div class="listing-card">
+                <div class="card-img-wrap">
+                  <img src="assets/images/imgAnuncio/apartamento.jpg" alt="Apartamento">
+                  <span class="card-badge badge-alq">Alquiler</span>
+                  <span class="card-code">cod:12345</span>
+                </div>
+                <div class="card-body">
+                  <div class="card-type">Apartamento</div>
+                  <div class="card-location"><i class="bi bi-geo-alt-fill"></i> Sta Fe de Ant, Llano de Bolívar</div>
+                  <div class="card-specs">
+                    <div class="card-spec"><i class="bi bi-rulers"></i> 210 m</div>
+                    <div class="card-spec"><i class="bi bi-door-open"></i> 1 hab</div>
+                    <div class="card-spec"><i class="bi bi-droplet-half"></i> 2 baños</div>
+                    <div class="card-spec"><i class="bi bi-car-front"></i> No</div>
+                  </div>
+                </div>
+                <div class="card-footer-related">
+                  <span class="card-price">$ 2.000.000</span>
+                  <a href="detalle.html" class="btn-detalle">Ver Detalle</a>
+                </div>
+              </div>
+
+              <div class="listing-card">
+                <div class="card-img-wrap">
+                  <img src="assets/images/imgAnuncio/lote.jpg" alt="Lote">
+                  <span class="card-badge badge-venta-c">Venta</span>
+                  <span class="card-code">cod:12345</span>
+                </div>
+                <div class="card-body">
+                  <div class="card-type">Lote</div>
+                  <div class="card-location"><i class="bi bi-geo-alt-fill"></i> Sta Fe de Ant, La Membrillala</div>
+                  <div class="card-specs">
+                    <div class="card-spec"><i class="bi bi-rulers"></i> 500 m²</div>
+                  </div>
+                </div>
+                <div class="card-footer-related">
+                  <span class="card-price">$ 15.000.000</span>
+                  <a href="detalle.html" class="btn-detalle">Ver Detalle</a>
+                </div>
+              </div>
+
+              <div class="listing-card">
+                <div class="card-img-wrap">
+                  <img src="assets/images/casa.jpg" alt="Casa">
+                  <span class="card-badge badge-venta-c">Venta</span>
+                  <span class="card-code">cod:99001</span>
+                </div>
+                <div class="card-body">
+                  <div class="card-type">Casa</div>
+                  <div class="card-location"><i class="bi bi-geo-alt-fill"></i> Sta Fe de Ant, Centro</div>
+                  <div class="card-specs">
+                    <div class="card-spec"><i class="bi bi-rulers"></i> 120 m</div>
+                    <div class="card-spec"><i class="bi bi-door-open"></i> 3 hab</div>
+                    <div class="card-spec"><i class="bi bi-droplet-half"></i> 2 baños</div>
+                    <div class="card-spec"><i class="bi bi-car-front"></i> Sí</div>
+                  </div>
+                </div>
+                <div class="card-footer-related">
+                  <span class="card-price">$ 8.500.000</span>
+                  <a href="detalle.html" class="btn-detalle">Ver Detalle</a>
+                </div>
+              </div>
+
+            </div><!-- /carouselTrack -->
+
+            <button class="carousel-arrow next" id="nextBtn">
+              <i class="bi bi-chevron-right"></i>
+            </button>
+
+          </div><!-- /carousel-wrap -->
+        </div><!-- /related-section -->
+
+      </div><!-- /page -->
+
+    </div><!-- /layout -->
+  </section>
+
+  <!-- BOTÓN FLOTANTE FILTROS (solo móvil) -->
+  <button class="fab-filter" id="fabFilter" onclick="openDrawer()">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="8" y1="12" x2="20" y2="12"/><line x1="12" y1="18" x2="20" y2="18"/></svg>
+    Filtros
+    <span class="fab-badge" id="fabBadge" style="display:none">0</span>
+  </button>
+
+  <!-- OVERLAY DRAWER MÓVIL -->
+  <div class="drawer-overlay" id="drawerOverlay" onclick="closeDrawer()"></div>
+
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div class="drawer-handle-bar"></div>
+    <div class="drawer-top">
+      <span class="drawer-top-title">Filtros</span>
+      <button class="drawer-clear-btn" onclick="clearFilters()">Limpiar todo</button>
     </div>
-    <!-- /gallery-col -->
-<img src="">
-    <!-- INFO CARD -->
-    <div class="right-col">
-      <div class="info-card">
-        <h2 class="info-title">Lote</h2>
-        <p class="info-location">&#128205; Membrillala, Santa Fe de Antioquia</p>
+    <div class="drawer-scroll">
 
-        <div class="info-specs">
-          
-          <div class="info-spec"><i class="fa-solid fa-ruler-combined spec-ico"></i><span class="spec-label">1200 m²</span></div>
-          <div></div>
-          <div></div>
+      <div class="dr-section">
+        <div class="dr-label">Tipo de acción</div>
+        <div class="dr-chips">
+          <input type="radio" name="dr-operacion" id="dr-arr" class="dr-chip-input" checked>
+          <label for="dr-arr" class="dr-chip">Arriendo</label>
+          <input type="radio" name="dr-operacion" id="dr-ven" class="dr-chip-input">
+          <label for="dr-ven" class="dr-chip">Venta</label>
         </div>
-
-        <div class="info-price">$ 120.000.000</div>
-
-        <div class="agente-contact-row">
-          <div class="agente-side">
-            <div class="agente-avatar">
-              <img src="./assets/images/imgInicio/JoseMadrid.png" alt="Jose">
-            </div>
-            <span class="agente-nombre">Jose Madrid</span>
-          </div>
-          <div class="contact-side">
-            <span class="contactame-label">Contáctame:</span>
-            <div class="contact-icons">
-              <a href="https://wa.me/57300000000" class="ci ci-whatsapp" title="WhatsApp">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              </a>
-              <a href="tel:+57300000000" class="ci ci-phone" title="Llamar">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-              </a>
-              <a href="mailto:tatiana@homdly.co" class="ci ci-email" title="Email">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <button class="btn-visita" id="btnVisita">Solicitar una visita</button>
       </div>
+
+      <div class="dr-section">
+        <div class="dr-label">Tipo de inmueble</div>
+        <div class="dr-chips">
+          <input type="checkbox" id="dr-casa" class="dr-chip-input" onchange="updateBadge()">
+          <label for="dr-casa" class="dr-chip">Casa</label>
+          <input type="checkbox" id="dr-apto" class="dr-chip-input" onchange="updateBadge()">
+          <label for="dr-apto" class="dr-chip">Apartamento</label>
+          <input type="checkbox" id="dr-lote" class="dr-chip-input" onchange="updateBadge()">
+          <label for="dr-lote" class="dr-chip">Lote</label>
+          <input type="checkbox" id="dr-finca" class="dr-chip-input" onchange="updateBadge()">
+          <label for="dr-finca" class="dr-chip">Finca</label>
+          <input type="checkbox" id="dr-local" class="dr-chip-input" onchange="updateBadge()">
+          <label for="dr-local" class="dr-chip">Local</label>
+          <input type="checkbox" id="dr-bodega" class="dr-chip-input" onchange="updateBadge()">
+          <label for="dr-bodega" class="dr-chip">Bodega</label>
+        </div>
+      </div>
+
+      <div class="dr-section">
+        <div class="dr-label">Rango de precio</div>
+        <div class="dr-price-row">
+          <input type="text" class="dr-price-input" id="drPriceMin" value="500.000" placeholder="Mín">
+          <span class="dr-price-sep">—</span>
+          <input type="text" class="dr-price-input" id="drPriceMax" value="5.000.000" placeholder="Máx">
+        </div>
+        <div class="dr-range-wrap">
+          <div class="dr-range-track"><div class="dr-range-fill" id="drRangeFill"></div></div>
+          <input type="range" id="drMin" min="0" max="10000000" value="500000" step="100000" oninput="updateDrRange()">
+          <input type="range" id="drMax" min="0" max="10000000" value="5000000" step="100000" oninput="updateDrRange()">
+        </div>
+      </div>
+
+      <div class="dr-section">
+        <div class="dr-label">Habitaciones</div>
+        <div class="dr-chips">
+          <input type="radio" name="dr-hab" id="dr-h-any" class="dr-chip-input" checked>
+          <label for="dr-h-any" class="dr-chip">Cualquier</label>
+          <input type="radio" name="dr-hab" id="dr-h-1" class="dr-chip-input">
+          <label for="dr-h-1" class="dr-chip">1</label>
+          <input type="radio" name="dr-hab" id="dr-h-2" class="dr-chip-input">
+          <label for="dr-h-2" class="dr-chip">2</label>
+          <input type="radio" name="dr-hab" id="dr-h-3" class="dr-chip-input">
+          <label for="dr-h-3" class="dr-chip">3</label>
+          <input type="radio" name="dr-hab" id="dr-h-4" class="dr-chip-input">
+          <label for="dr-h-4" class="dr-chip">4+</label>
+        </div>
+      </div>
+
+      <div class="dr-section">
+        <div class="dr-label">Baños</div>
+        <div class="dr-chips">
+          <input type="radio" name="dr-ban" id="dr-b-any" class="dr-chip-input" checked>
+          <label for="dr-b-any" class="dr-chip">Cualquier</label>
+          <input type="radio" name="dr-ban" id="dr-b-1" class="dr-chip-input">
+          <label for="dr-b-1" class="dr-chip">1</label>
+          <input type="radio" name="dr-ban" id="dr-b-2" class="dr-chip-input">
+          <label for="dr-b-2" class="dr-chip">2</label>
+          <input type="radio" name="dr-ban" id="dr-b-3" class="dr-chip-input">
+          <label for="dr-b-3" class="dr-chip">3+</label>
+        </div>
+      </div>
+
+      <div class="dr-section">
+        <div class="dr-label">Características</div>
+        <div class="dr-check-grid">
+          <label class="dr-check-item"><input type="checkbox" onchange="updateBadge()"><span class="dr-checkmark"></span><span>Parqueadero</span></label>
+          <label class="dr-check-item"><input type="checkbox" onchange="updateBadge()"><span class="dr-checkmark"></span><span>Piscina</span></label>
+          <label class="dr-check-item"><input type="checkbox" onchange="updateBadge()"><span class="dr-checkmark"></span><span>Balcón / Terraza</span></label>
+          <label class="dr-check-item"><input type="checkbox" onchange="updateBadge()"><span class="dr-checkmark"></span><span>Ascensor</span></label>
+          <label class="dr-check-item"><input type="checkbox" onchange="updateBadge()"><span class="dr-checkmark"></span><span>Closet</span></label>
+          <label class="dr-check-item"><input type="checkbox" onchange="updateBadge()"><span class="dr-checkmark"></span><span>Tina</span></label>
+          <label class="dr-check-item"><input type="checkbox" onchange="updateBadge()"><span class="dr-checkmark"></span><span>Cámaras de seguridad</span></label>
+          <label class="dr-check-item"><input type="checkbox" onchange="updateBadge()"><span class="dr-checkmark"></span><span>Adm. incluida</span></label>
+        </div>
+      </div>
+
+      <div class="dr-section">
+        <div class="dr-label">Estrato</div>
+        <div class="dr-chips">
+          <input type="radio" name="dr-est" id="dr-e-any" class="dr-chip-input" checked>
+          <label for="dr-e-any" class="dr-chip">Cualquier</label>
+          <input type="radio" name="dr-est" id="dr-e-1" class="dr-chip-input">
+          <label for="dr-e-1" class="dr-chip">1</label>
+          <input type="radio" name="dr-est" id="dr-e-2" class="dr-chip-input">
+          <label for="dr-e-2" class="dr-chip">2</label>
+          <input type="radio" name="dr-est" id="dr-e-3" class="dr-chip-input">
+          <label for="dr-e-3" class="dr-chip">3</label>
+          <input type="radio" name="dr-est" id="dr-e-4" class="dr-chip-input">
+          <label for="dr-e-4" class="dr-chip">4</label>
+          <input type="radio" name="dr-est" id="dr-e-5" class="dr-chip-input">
+          <label for="dr-e-5" class="dr-chip">5</label>
+        </div>
+      </div>
+
+    </div><!-- /drawer-scroll -->
+    <div class="drawer-foot">
+      <button class="drawer-apply-btn" onclick="closeDrawer()">Ver propiedades</button>
     </div>
-    <!-- /right-col -->
+  </div><!-- /mobile-drawer -->
 
-  </div><!-- /top-row -->
+  <footer></footer>
 
-  <div class="page-divider"></div>
-
-  <!-- ── DETALLE: Descripción + Mapa ───────────────────────────────────── -->
-  <div class="detail-section">
-
-    <div class="detail-left">
-      <div class="price-heading">$ 120.000.000</div>
-      <div class="prop-subtitle">
-        Lote a la venta<br>
-        <span>Sta Fe de Ant, Membrillala</span>
-      </div>
-
-      <div class="section-label">Descripción</div>
-      <div class="description">
-        <p style="text-align: justify;">Amplio lote plano de 2,830.3 m², ideal para construir la casa de tus sueños, una finca de descanso o desarrollar un proyecto campestre en un entorno tranquilo y natural.</p>
-        <p style="text-align: justify;">Cuenta con medidas aproximadas de 68.2 metros de largo por 41.5 metros de ancho, ofreciendo excelente amplitud, comodidad y privacidad para diferentes posibilidades de construcción.</p>
-        <p style="text-align: justify;">Ubicado en medio de áreas verdes, árboles y hermosos paisajes, este terreno es perfecto para disfrutar de la tranquilidad, el aire libre y una conexión permanente con la naturaleza.</p>
-      </div>
-
-      <div class="amenities-title">Características del Inmueble</div> <br>
-<div class="amenities-grid">
-  <div class="amenity"><div class="amenity-icon"><i class="bi bi-rulers"></i></div>Área m²</div>
-  <div class="amenity"><div class="amenity-icon"><i class="bi bi-bounding-box"></i></div>Frente/Fondo</div>
-  <div class="amenity"><div class="amenity-icon"><i class="bi bi-layers"></i></div>Topografía</div>
-  <div class="amenity"><div class="amenity-icon"><i class="bi bi-triangle"></i></div>Esquinero</div>
-  <div class="amenity"><div class="amenity-icon"><i class="bi bi-droplet"></i></div>Acueducto</div>
-  <div class="amenity"><div class="amenity-icon"><i class="bi bi-lightning-charge"></i></div>Energía</div>
-  <div class="amenity"><div class="amenity-icon"><i class="bi bi-droplet-half"></i></div>Alcantarillado</div>
-  <div class="amenity"><div class="amenity-icon"><i class="bi bi-signpost-2"></i></div>Vía pavimentada</div>
-  <div class="amenity"><div class="amenity-icon"><i class="bi bi-file-earmark-text"></i></div>Escritura</div>
-  <div class="amenity"><div class="amenity-icon"><i class="bi bi-tree"></i></div>Zona verde</div>
-</div>  
-    </div>
-    
-
-    <div class="detail-right">
-      <div class="map-container">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31721.6!2d-75.827!3d6.5547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e468d09a3e60b31%3A0x3b25e7a7a8e0b7f!2sSanta%20Fe%20de%20Antioquia!5e0!3m2!1ses!2sco!4v1700000000000"
-          allowfullscreen loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-      </div>
-    </div>
-
-  </div><!-- /detail-section -->
-
-  <div class="page-divider"></div>
-
-  <!-- ── LISTADOS RELACIONADOS ─────────────────────────────────────────── -->
-  <div class="related-section">
-    <h3 class="related-title">Propiedades relacionadas</h3>
-    <div class="carousel-wrap">
-
-      <button class="carousel-arrow prev" id="prevBtn">
-        <i class="bi bi-chevron-left"></i>
-      </button>
-
-      <div class="carousel-track" id="carouselTrack">
-
-        <div class="listing-card">
-          <div class="card-img-wrap">
-            <img src="assets/images/imgAnuncio/casa.jpg" alt="Casa">
-            <span class="card-badge badge-alq">Alquiler</span>
-            <span class="card-code">cod:4789L</span>
-          </div>
-          <div class="card-body">
-            <div class="card-type">Casa</div>
-            <div class="card-location"><i class="bi bi-geo-alt-fill"></i> Sta Fe de Ant, Santa Lucía</div>
-            <div class="card-specs">
-              <div class="card-spec"><i class="bi bi-rulers"></i> 55 m</div>
-              <div class="card-spec"><i class="bi bi-door-open"></i> 3 hab</div>
-              <div class="card-spec"><i class="bi bi-droplet-half"></i> 2 baños</div>
-              <div class="card-spec"><i class="bi bi-car-front"></i> Sí</div>
-            </div>
-          </div>
-          <div class="card-footer-related">
-            <span class="card-price">$ 1.500.000</span>
-            <a href="detalle.html" class="btn-detalle">Ver Detalle</a>
-          </div>
-        </div>
-
-        <div class="listing-card">
-          <div class="card-img-wrap">
-            <img src="assets/images/imgAnuncio/apartamento.jpg" alt="Apartamento">
-            <span class="card-badge badge-alq">Alquiler</span>
-            <span class="card-code">cod:12345</span>
-          </div>
-          <div class="card-body">
-            <div class="card-type">Apartamento</div>
-            <div class="card-location"><i class="bi bi-geo-alt-fill"></i> Sta Fe de Ant, Llano de Bolívar</div>
-            <div class="card-specs">
-              <div class="card-spec"><i class="bi bi-rulers"></i> 210 m</div>
-              <div class="card-spec"><i class="bi bi-door-open"></i> 1 hab</div>
-              <div class="card-spec"><i class="bi bi-droplet-half"></i> 2 baños</div>
-              <div class="card-spec"><i class="bi bi-car-front"></i> No</div>
-            </div>
-          </div>
-          <div class="card-footer-related">
-            <span class="card-price">$ 2.000.000</span>
-             <a href="detalle.html" class="btn-detalle">Ver Detalle</a>
-          </div>
-        </div>
-
-        <div class="listing-card">
-          <div class="card-img-wrap">
-            <img src="assets/images/imgAnuncio/lote.jpg" alt="Lote">
-            <span class="card-badge badge-venta-c">Venta</span>
-            <span class="card-code">cod:12345</span>
-          </div>
-          <div class="card-body">
-            <div class="card-type">Lote</div>
-            <div class="card-location"><i class="bi bi-geo-alt-fill"></i> Sta Fe de Ant, La Membrillala</div>
-            <div class="card-specs">
-              <div class="card-spec"><i class="bi bi-rulers"></i> 500 m²</div>
-            </div>
-          </div>
-          <div class="card-footer-related">
-            <span class="card-price">$ 15.000.000</span>
-            <a href="detalle.html" class="btn-detalle">Ver Detalle</a>
-          </div>
-        </div>
-
-        <div class="listing-card">
-          <div class="card-img-wrap">
-            <img src="assets/images/casa.jpg" alt="Casa">
-            <span class="card-badge badge-venta-c">Venta</span>
-            <span class="card-code">cod:99001</span>
-          </div>
-          <div class="card-body">
-            <div class="card-type">Casa</div>
-            <div class="card-location"><i class="bi bi-geo-alt-fill"></i> Sta Fe de Ant, Centro</div>
-            <div class="card-specs">
-              <div class="card-spec"><i class="bi bi-rulers"></i> 120 m</div>
-              <div class="card-spec"><i class="bi bi-door-open"></i> 3 hab</div>
-              <div class="card-spec"><i class="bi bi-droplet-half"></i> 2 baños</div>
-              <div class="card-spec"><i class="bi bi-car-front"></i> Sí</div>
-            </div>
-          </div>
-          <div class="card-footer-related">
-            <span class="card-price">$ 8.500.000</span>
-           <a href="detalle.html" class="btn-detalle">Ver Detalle</a>
-          </div>
-        </div>
-
-      </div><!-- /carouselTrack -->
-
-      <button class="carousel-arrow next" id="nextBtn">
-        <i class="bi bi-chevron-right"></i>
-      </button>
-
-    </div><!-- /carousel-wrap -->
-  </div><!-- /related-section -->
-
-</div><!-- /page -->
-
-
-<script src="./assets/js/detallelote012.js"></script>
+  <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/navegacion.js"></script>
+  <script src="./assets/js/detallelote012.js"></script>
+  <script src="./assets/js/filtroL.js"></script>
+  
 </body>
 </html>
