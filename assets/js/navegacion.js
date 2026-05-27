@@ -28,7 +28,7 @@ header.innerHTML = `
 
       <!-- Logo -->
       <a href="index.html" class="logo" >
-        <img src="./assets/images/logo.png" alt="Homdly" height="45">
+        <img src="../assets/images/logo.png" alt="Homdly" height="45">
       </a>
 
       <!-- Botón hamburguesa — solo aparece en móvil -->
