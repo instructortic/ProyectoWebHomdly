@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Homdly – Apartaestudio El Llano</title>
+  <title>Homdly – Casa Llano de Bolivar</title>
 
   <link rel="icon" type="image/png" href="logo.png">
 
@@ -18,9 +18,7 @@
 </head>
 <body>
 
-<!-- ═══════════════════════════════════════════════════════════════════════════
-     MODAL GALERÍA  (estructura fija, igual en todos los detalles)
-════════════════════════════════════════════════════════════════════════════ -->
+<!-- MODAL GALERÍA -->
 <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true">
   <div class="modal-box">
     <div class="modal-header">
@@ -42,9 +40,7 @@
 </div>
 
 
-<!-- ═══════════════════════════════════════════════════════════════════════════
-     PÁGINA
-════════════════════════════════════════════════════════════════════════════ -->
+<!--PÁGINA-->
 <div class="page">
 
   <div class="page-close-row">
@@ -53,13 +49,10 @@
     </a>
   </div>
 
-  <!-- ── FILA SUPERIOR: Galería + Tarjeta info ─────────────────────────── -->
+  <!-- ── Galería + Tarjeta info -->
   <div class="top-row">
 
-    <!-- GALERÍA
-         ▸ data-fotos  → array JSON con {src, label} de cada foto
-         El JS lee este atributo; no hay ningún array en el .js
-    -->
+    <!-- GALERÍA-->
     <div class="gallery-col">
       <div class="gallery-grid">
 
@@ -69,23 +62,16 @@
           <div class="img-counter" id="imgCounter">1 / 7</div>
         </div>
 
-        <!--
-          ╔══════════════════════════════════════════════════════════╗
-          ║  AQUÍ VAN LAS FOTOS  ←  cambia solo esto en cada HTML  ║
-          ╚══════════════════════════════════════════════════════════╝
-          id="galeria"   → solo guarda el JSON, display:none, no se ve
-          id="thumbsCol" → contenedor visual donde el JS pinta las miniaturas
-        -->
+        <!--imagenes-->
         <div id="galeria" style="display:none"
           data-fotos='[
-           {"img src="""">}
-             {"img src":"E:\homdly_Semilla\assets\images\alldetalles/principal.jpg"},
-            {"src":"https://umbral.co/wp-content/uploads/2021/11/laurel-internas-22-1.jpg",   "label":"Cocina integral"},
-            {"src":"https://umbral.co/wp-content/uploads/2021/11/DSC0980-1200x801.jpg",       "label":"Habitación principal"},
-            {"src":"https://umbral.co/wp-content/uploads/2021/11/menta-interior-10.jpg",      "label":"Baño completo"},
-            {"src":"https://gprovivienda.com/wp-content/uploads/2019/03/provivienda-van-gogh-modelo-D-sala-comedor-2.jpg","label":"Balcón"},
-            {"src":"https://images.ctfassets.net/8lc7xdlkm4kt/6bYolzLQSPgZawCDlHb9qr/ca35368f17fc3143fe969c9b074a73de/mint-apartamentos-barranquilla-sala.jpg","label":"Segundo ambiente"},
-            {"src":"https://img.properati.com/eyJidWNrZXQiOiJwcmQtbGlmdWxsY29ubmVjdC1wcm9qZWN0cy1hZG1pbi1pbWFnZXMiLCJrZXkiOiJjNmNhYzQ3My04YTMwLTQzMWYtYTcxMi05NzkwZTEyYmIwZmEvYzZjYWM0NzMtOGEzMC00MzFmLWE3MTItOTc5MGUxMmJiMGZhX2Y5ZGExNzViLTdmMGQtNGVmYi04MmY0LWVlMTdlMmNhMTY2Yy5qcGciLCJicmFuZCI6InByb3BlcmF0aSIsImVkaXRzIjp7InJvdGF0ZSI6bnVsbCwicmVzaXplIjp7IndpZHRoIjo2NDAsImhlaWdodCI6NDgwLCJmaXQiOiJjb3ZlciJ9fX0=","label":"Vista exterior"}
+            {"src":"./assets/images/imgCasa008/04.png", "label":"Fachada"},
+            {"src":"./assets/images/imgCasa008/03.png", "label":"Cocina"},
+            {"src":"./assets/images/imgCasa008/02.png", "label":"Baño"},
+            {"src":"./assets/images/imgCasa008/11.png", "label":"Oficina"},
+            {"src":"./assets/images/imgCasa008/19.png", "label":"Habitación"},
+            {"src":"./assets/images/imgCasa008/20.png", "label":"Ducha"},
+            {"src":"./assets/images/imgCasa008/04.png", "label":"Sala"}
           ]'>
         </div>
 
@@ -95,7 +81,7 @@
       </div>
 
       <div class="below-gallery">
-        <span class="codigo-text">Código: 260094</span>
+        <span class="codigo-text">Código: 008</span>
         <div class="gallery-actions">
           <button class="action-link">&#9825; Guardar</button>
           <button class="action-link">&#10548; Compartir</button>
@@ -103,18 +89,18 @@
       </div>
     </div>
     <!-- /gallery-col -->
-<img src="">
+
     <!-- INFO CARD -->
     <div class="right-col">
       <div class="info-card">
-        <h2 class="info-title">Apartaestudio</h2>
-        <p class="info-location">&#128205; Barrio El Llano Bolívar, Santa Fe de Antioquia</p>
+        <h2 class="info-title">Casa</h2>
+        <p class="info-location">&#128205; Llano de Bolívar, Santa Fe de Antioquia</p>
 
         <div class="info-specs">
-          <div class="info-spec"><i class="fa-solid fa-bed spec-ico"></i><span class="spec-label">2 Habitaciones</span></div>
-          <div class="info-spec"><i class="fa-solid fa-ruler-combined spec-ico"></i><span class="spec-label">80 m²</span></div>
-          <div class="info-spec"><i class="fa-solid fa-shower spec-ico"></i><span class="spec-label">1 Baño</span></div>
-          <div class="info-spec"><i class="fa-solid fa-building spec-ico"></i><span class="spec-label">Sin parqueadero</span></div>
+          <div class="info-spec"><i class="fa-solid fa-bed spec-ico"></i><span class="spec-label">4 Habitaciones</span></div>
+          <div class="info-spec"><i class="fa-solid fa-ruler-combined spec-ico"></i><span class="spec-label">500 m²</span></div>
+          <div class="info-spec"><i class="fa-solid fa-shower spec-ico"></i><span class="spec-label">3 Baños</span></div>
+          <div class="info-spec"><i class="fa-solid fa-building spec-ico"></i><span class="spec-label">Con parqueadero</span></div>
         </div>
 
         <div class="info-price">$ 2.000.000</div>
@@ -122,9 +108,9 @@
         <div class="agente-contact-row">
           <div class="agente-side">
             <div class="agente-avatar">
-              <img src="https://st3.depositphotos.com/1003989/17911/i/450/depositphotos_179114944-stock-photo-smiling-businesswoman-wearing-black-suit.jpg" alt="Tatiana">
+              <img src="./assets/images/imgCasa008/juliana1.jpg" alt="Tatiana">
             </div>
-            <span class="agente-nombre">Tatiana Ortiz V.</span>
+            <span class="agente-nombre">Juliana Villa.</span>
           </div>
           <div class="contact-side">
             <span class="contactame-label">Contáctame:</span>
@@ -151,29 +137,29 @@
 
   <div class="page-divider"></div>
 
-  <!-- ── DETALLE: Descripción + Mapa ───────────────────────────────────── -->
+  <!-- ── DETALLE: Descripción + Mapa -->
   <div class="detail-section">
 
     <div class="detail-left">
       <div class="price-heading">$ 2.000.000</div>
       <div class="prop-subtitle">
-        Apartamento en Arriendo<br>
-        <span>Sta Fe de Ant, Llano de Bolívar</span>
+        Casa en Arriendo<br>
+        <span>Sta Fe de Ant, Llano de Bolivar</span>
       </div>
 
       <div class="section-label">Descripción</div>
       <div class="description">
-        <p>Descubra la elegancia y el diseño moderno en este espectacular apartaestudio de 90 metros cuadrados. Su iluminación inteligente transforma cada rincón para un ambiente amplio y un descanso reparador.</p>
-        <p>Pensado para quienes buscan calidad, inmersos en la naturaleza de villa circuiar, reúne en Manzanas el primor, con espacios de descanso en terraza y dos cocinas: samorización individual y sin reciente.</p>
-        <p>Un hogar ideal para quienes buscan calidad y diseño, disfrutando de la privacidad de sus ambientes.</p>
+        <p>Disfruta de la combinación perfecta entre la arquitectura tradicional y el confort moderno en esta</p>
+        <p>espectacular casa campestre de 500 m². Ubicada en el exclusivo clima cálido de Santa Fe, esta</p>
+        <p>propiedad es el refugio ideal para quienes buscan privacidad y desconexión total.</p>
       </div>
 
       <div class="amenities-title">Características del Inmueble</div>
       <div class="amenities-grid">
         <div class="amenity"><div class="amenity-icon"><i class="bi bi-box"></i></div>Closet</div>
         <div class="amenity"><div class="amenity-icon"><i class="bi bi-car-front-fill"></i></div>Parqueadero</div>
-        <div class="amenity"><div class="amenity-icon"><i class="bi bi-water"></i></div>Piscina</div>
-        <div class="amenity"><div class="amenity-icon"><i class="bi bi-arrow-up-square"></i></div>Ascensor</div>
+        <div class="amenity"><div class="amenity-icon"><i class="bi bi-tree"></i></div>Patio</div>
+        <div class="amenity"><div class="amenity-icon"><i class="bi bi-house-door"></i></div>Terraza</div>
         <div class="amenity"><div class="amenity-icon"><i class="bi bi-camera-video"></i></div>Cuarto útil</div>
         <div class="amenity"><div class="amenity-icon"><i class="bi bi-heart-pulse"></i></div>Mascotas</div>
         <div class="amenity"><div class="amenity-icon"><i class="bi bi-building"></i></div>Administ.</div>
@@ -197,7 +183,7 @@
 
   <div class="page-divider"></div>
 
-  <!-- ── LISTADOS RELACIONADOS ─────────────────────────────────────────── -->
+  <!-- ── LISTADOS RELACIONADOS-->
   <div class="related-section">
     <h3 class="related-title">Propiedades relacionadas</h3>
     <div class="carousel-wrap">
@@ -210,9 +196,9 @@
 
         <div class="listing-card">
           <div class="card-img-wrap">
-            <img src="assets/images/casa.jpg" alt="Casa">
+            <img src="assets/images/imgCasa008/casa.jpg" alt="Casa">
             <span class="card-badge badge-alq">Alquiler</span>
-            <span class="card-code">cod:4789L</span>
+            <span class="card-code">cod:008L</span>
           </div>
           <div class="card-body">
             <div class="card-type">Casa</div>
@@ -232,7 +218,7 @@
 
         <div class="listing-card">
           <div class="card-img-wrap">
-            <img src="assets/images/apartamento.jpg" alt="Apartamento">
+            <img src="assets/images/imgCasa008/apartamento.jpg" alt="Apartamento">
             <span class="card-badge badge-alq">Alquiler</span>
             <span class="card-code">cod:12345</span>
           </div>
@@ -254,7 +240,7 @@
 
         <div class="listing-card">
           <div class="card-img-wrap">
-            <img src="assets/images/lote.jpg" alt="Lote">
+            <img src="assets/images/imgCasa008/lote.jpg" alt="Lote">
             <span class="card-badge badge-venta-c">Venta</span>
             <span class="card-code">cod:12345</span>
           </div>
@@ -273,7 +259,7 @@
 
         <div class="listing-card">
           <div class="card-img-wrap">
-            <img src="assets/images/casa.jpg" alt="Casa">
+            <img src="assets/images/imgCasa008/casa.jpg" alt="Casa">
             <span class="card-badge badge-venta-c">Venta</span>
             <span class="card-code">cod:99001</span>
           </div>
@@ -289,7 +275,7 @@
           </div>
           <div class="card-footer-related">
             <span class="card-price">$ 8.500.000</span>
-           <a href="detalle.html" class="btn-detalle">Ver Detalle</a>
+           <a href="./detalle008/detalle008.html" class="btn-detalle">Ver Detalle</a>
           </div>
         </div>
 
@@ -304,6 +290,6 @@
 
 </div><!-- /page -->
 
-<script src="./assets/js/detalle.js"></script>
+<script src="./assets/js/detalleCopia.js"></script>
 </body>
 </html>
