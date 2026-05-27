@@ -77,7 +77,7 @@ header.innerHTML = `
           <h1>HOMDLY</h1>
         </div>
       </div>
-  
+   
       <!-- Columna 1 -->
       <div class="col">
         <h4>Sobre Homdly</h4>
