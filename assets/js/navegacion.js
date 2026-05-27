@@ -72,7 +72,7 @@ header.innerHTML = `
   
       <!-- Logo -->
       <div class="logo-Footer">
-        <img src="./assets/images/logo 50.png" alt="">
+        <img src="../assets/images/logo 50.png" alt="">
         <div class="logo-text">
           <h1>HOMDLY</h1>
         </div>
