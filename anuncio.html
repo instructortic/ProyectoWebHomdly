@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,32 +12,27 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0..1,0" />
-
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0..1,0" />
+  
   <!-- Font Awesome para los íconos de redes y usuario -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
-    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+  
 
-
-  <link rel="stylesheet" href="./assets/css/styleFooter.css">
+    <link rel="stylesheet" href="./assets/css/styleFooter.css"> 
   <link rel="stylesheet" href="./assets/css/style.css">
-  <link rel="stylesheet" href="./assets/css/styleLogin.css">
-
+    <link rel="stylesheet" href="./assets/css/styleLogin.css">
+  
   <link rel="stylesheet" href="./assets/css/anuncio.css">
 
-
+  
 </head>
-
 <body>
 
-  <header class="header"></header>
+  <header class="header"></header> 
 
   <main>
     <section class="properties-section">
@@ -47,7 +41,7 @@
         <!-- ===== TABS ===== -->
         <div class="tabs">
           <button class="tab active" data-tab="arriendo" onclick="setTab(this)">Arriendos</button>
-          <button class="tab tab-compra" data-tab="compra" onclick="setTab(this)">Compra</button>
+          <button class="tab tab-compra" data-tab="compra" onclick="setTab(this)">Compra</button>                    
         </div>
 
         <!-- ===== FILTROS ===== -->
@@ -88,24 +82,21 @@
 
         <!-- ===== GRID ===== -->
         <div class="properties-grid" id="propertiesGrid">
-
-
+          
+                
           <!-- CARD 1 – Lote / Venta -->
-          <div class="property-card" data-modalidad="arriendo" data-dep="Antioquia" data-mun="Bogotá"
-            data-barrio="Chapinero" data-tipo="Apartamento">
+          <div class="property-card" data-modalidad="arriendo" data-dep="Antioquia" data-mun="Bogotá" data-barrio="Chapinero" data-tipo="Apartamento">
             <div class="card-image">
               <img src="assets/images/imgAnuncio/apartamentoN.V.png" alt="Apartamento">
               <span class="badge badge-alquiler">Alquiler</span>
-              <button class="btn-favorite" aria-label="Favorito"><span
-                  class="material-symbols-rounded">favorite</span></button>
+              <button class="btn-favorite" aria-label="Favorito"><span class="material-symbols-rounded">favorite</span></button>
             </div>
             <div class="card-body">
               <div class="card-header-row">
                 <h3 class="property-type">Apartamento</h3>
                 <span class="property-code">cod:001</span>
               </div>
-              <p class="property-location"><span class="material-symbols-rounded">location_on</span>Sta Fe de Ant, Llano
-                de Bolívar</p>
+              <p class="property-location"><span class="material-symbols-rounded">location_on</span>Sta Fe de Ant, Llano de Bolívar</p>
               <div class="card-divider"></div>
               <div class="property-specs">
                 <div class="spec-item"><span class="material-symbols-rounded">straighten</span><span>47 m²</span></div>
@@ -119,68 +110,20 @@
               <a href="detalle001.html" class="btn-detail">Ver Detalle</a>
             </div>
           </div>
-          <!-- CARD 002 – Apartamento / venta -->
-          <div class="property-card">
-            <div class="card-image">
-              <img src="https://www.casasparaconstruir.com/projetos/161/04.jpg" alt="Fachada">
-              <span class="badge badge-venta">Venta</span>
-              <button class="btn-favorite" aria-label="Favorito">
-                <span class="material-symbols-rounded">favorite</span>
-              </button>
-            </div>
-            <div class="card-body">
-              <div class="card-header-row">
-                <h3 class="property-type">Apartamento</h3>
-                <span class="property-code">cod:002</span>
-              </div>
-
-              <p class="property-location">
-                <span class="material-symbols-rounded">location_on</span>
-                Medellin, Barrio Buenos aires
-              </p>
-
-              <div class="card-divider"></div>
-              <div class="property-specs">
-                <div class="spec-item">
-                  <span class="material-symbols-rounded">straighten</span>
-                  <span>150 m²</span>
-                </div>
-                <div class="spec-item">
-                  <span class="material-symbols-rounded">bed</span>
-                  <span>3 hab</span>
-                </div>
-                <div class="spec-item">
-                  <span class="material-symbols-rounded">shower</span>
-                  <span>2 baños</span>
-                </div>
-                <div class="spec-item">
-                  <span class="material-symbols-rounded">garage_home</span>
-                  <span>Si</span>
-                </div>
-              </div>
-            </div>
-            <div class="card-footer">
-              <span class="property-price">$ 250.000.000</span>
-              <a href="detalle002.html" class="btn-detail">Ver Detalle</a>
-            </div>
-          </div>
-          <!-- CARD 5 – Casa / Alquiler -->
-
-          <div class="property-card" data-modalidad="arriendo" data-dep="Antioquia" data-mun="Medellín"
-            data-barrio="Laureles" data-tipo="Casa">
+            <!-- CARD 2 – Casa / Alquiler -->
+          
+          <div class="property-card" data-modalidad="arriendo" data-dep="Antioquia" data-mun="Medellín" data-barrio="Laureles" data-tipo="Casa">
             <div class="card-image">
               <img src="assets/images/casa005/frente.jpeg" alt="Casa">
               <span class="badge badge-alquiler">Alquiler</span>
-              <button class="btn-favorite" aria-label="Favorito"><span
-                  class="material-symbols-rounded">favorite</span></button>
+              <button class="btn-favorite" aria-label="Favorito"><span class="material-symbols-rounded">favorite</span></button>
             </div>
             <div class="card-body">
               <div class="card-header-row">
                 <h3 class="property-type">Casa</h3>
                 <span class="property-code">Codigo: 005</span>
               </div>
-              <p class="property-location"><span class="material-symbols-rounded">location_on</span>Sta Fe de Ant, Santa
-                Lucia</p>
+              <p class="property-location"><span class="material-symbols-rounded">location_on</span>Sta Fe de Ant, Santa Lucia</p>
               <div class="card-divider"></div>
               <div class="property-specs">
                 <div class="spec-item"><span class="material-symbols-rounded">straighten</span><span>100 m²</span></div>
@@ -195,53 +138,99 @@
             </div>
           </div>
 
-          <!-- CARD 7 – casa / Venta -->
-          <div class="property-card">
-            <div class="card-image">
-              <img src="./assets/images/imgCasa007/02.jpg" alt="Casa">
-              <span class="badge badge-venta">Venta</span>
-              <button class="btn-favorite" aria-label="Favorito">
-                <span class="material-symbols-rounded">favorite</span>
-              </button>
-            </div>
-            <div class="card-body">
-              <div class="card-header-row">
-                <h3 class="property-type">Casa</h3>
-                <span class="property-code">cod:007</span>
-              </div>
+                    <!-- CARD 7 – casa / Venta -->  
+                        <div class="property-card">
+                        <div class="card-image">
+                            <img src="./assets/images/imgCasa007/02.jpg" alt="Casa">
+                            <span class="badge badge-venta">Venta</span>
+                            <button class="btn-favorite" aria-label="Favorito">
+                            <span class="material-symbols-rounded">favorite</span>
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-header-row">
+                            <h3 class="property-type">Casa</h3>
+                            <span class="property-code">cod:007</span>
+                            </div>
 
-              <p class="property-location">
-                <span class="material-symbols-rounded">location_on</span>
-                Sta Fe de Ant, San Pedro
-              </p>
+                            <p class="property-location">
+                            <span class="material-symbols-rounded">location_on</span>
+                            Sta Fe de Ant, San Pedro
+                            </p>
 
-              <div class="card-divider"></div>
-              <div class="property-specs">
-                <div class="spec-item">
-                  <span class="material-symbols-rounded">straighten</span>
-                  <span>120 m²</span>
-                </div>
-                <div class="spec-item">
-                  <span class="material-symbols-rounded">bed</span>
-                  <span>4 hab</span>
-                </div>
-                <div class="spec-item">
-                  <span class="material-symbols-rounded">shower</span>
-                  <span>3 baños</span>
-                </div>
-                <div class="spec-item">
-                  <span class="material-symbols-rounded">garage_home</span>
-                  <span>Si</span>
-                </div>
-              </div>
+                            <div class="card-divider"></div>
+                            <div class="property-specs">
+                            <div class="spec-item">
+                                <span class="material-symbols-rounded">straighten</span>
+                                <span>120 m²</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="material-symbols-rounded">bed</span>
+                                <span>4 hab</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="material-symbols-rounded">shower</span>
+                                <span>3 baños</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="material-symbols-rounded">garage_home</span>
+                                <span>Si</span>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <span class="property-price">$ 320.000.000</span>
+                            <a href="detalle_casa_007.html" class="btn-detail">Ver Detalle</a>
+                        </div>
+                        </div>
+                      <!-- CARD 008 – Casa / Alquiler -->
+      <div class="property-card">
+          <div class="card-image">
+            <img src="./assets/images/imgCasa008/11.png" alt="Casa">
+            <span class="badge badge-venta">Alquiler</span>
+            <button class="btn-favorite" aria-label="Favorito">
+              <span class="material-symbols-rounded">favorite</span>
+            </button>
+          </div>
+          <div class="card-body">
+            <div class="card-header-row">
+              <h3 class="property-type">Casa</h3>
+              <span class="property-code">cod:008</span>
             </div>
-            <div class="card-footer">
-              <span class="property-price">$ 320.000.000</span>
-              <a href="detalle_casa_007.html" class="btn-detail">Ver Detalle</a>
+
+
+            <p class="property-location">
+              <span class="material-symbols-rounded">location_on</span>
+              Sta Fe de Ant, Llano de Bolívar
+            </p>
+
+            <div class="card-divider"></div>
+            <div class="property-specs">
+              <div class="spec-item">
+                <span class="material-symbols-rounded">straighten</span>
+                <span>500 m²</span>
+              </div>
+              <div class="spec-item">
+                <span class="material-symbols-rounded">bed</span>
+                <span>4 hab</span>
+              </div>
+              <div class="spec-item">
+                <span class="material-symbols-rounded">shower</span>
+                <span>3 baños</span>
+              </div>
+              <div class="spec-item">
+                <span class="material-symbols-rounded">garage_home</span>
+                <span>Si</span>
+              </div>
             </div>
           </div>
+          <div class="card-footer">
+            <span class="property-price">$ 2.000.000</span>
+            <a href="detalle008.html" class="btn-detail">Ver Detalle</a>
+          </div>
+      </div>
 
-          <!-- CARD 009 – Lote / Venta -->
+                        <!-- CARD 009 – Lote / Venta -->
           <div class="property-card"> <!-- lo principal para crear el anuncio ya que es la e-card -->
             <div class="card-image">
               <img src="assets/images/imgDetalle09/lote1.png" alt="Lote">
@@ -264,138 +253,130 @@
                 <div class="spec-item">
                   <span class="material-symbols-rounded">straighten</span>
                   <span>500 m²</span>
-
+                  
                 </div>
               </div>
-
-              <p class="property-desc">Descubra la vida urbana en su maxima expresion con este espectacular lote a
-                estrenar ubicado en Santa Fe ...</p>
+              
+              <p class="property-desc">Descubra la vida urbana en su maxima expresion con este espectacular lote a estrenar ubicado en Santa Fe ...</p>
             </div>
             <div class="card-footer">
               <span class="property-price">$ 500.000.000</span>
               <a href="detalle_009.html" class="btn-detail">Ver Detalle</a>
-
-
+              
+               
             </div>
           </div>
 
+            <!-- CARD 10 – Lote A / Venta -->
+<div class="property-card" data-modalidad="compra" data-dep="Antioquia" data-mun="Santa Fe de Antioquia" data-barrio="La Membrillala" data-tipo="Lote">
 
-          <!-- CARD 10 – Lote A / Venta -->
-          <div class="property-card" data-modalidad="compra" data-dep="Antioquia" data-mun="Santa Fe de Antioquia"
-            data-barrio="La Membrillala" data-tipo="Lote">
 
+  <div class="card-image">
+    <img src="assets/images/imgAnuncio10/foto2cod10.png" alt="Lote A">
+    <span class="badge badge-venta">Venta</span>
+    <button class="btn-favorite" aria-label="Favorito">
+      <span class="material-symbols-rounded">favorite</span>
+    </button>
+  </div>
+
+  <div class="card-body">
+
+    <div class="card-header-row">
+      <h3 class="property-type">Lote en venta La Membrillala</h3>
+      <span class="property-code">cod:010</span>
+    </div>
+
+    <p class="property-location">
+      <span class="material-symbols-rounded">location_on</span>
+      Sta Fe de Ant, La Membrillala
+    </p>
+
+    <div class="card-divider"></div>
+
+    <div class="property-specs">
+      <div class="spec-item">
+        <span class="material-symbols-rounded">straighten</span>
+        <span>1.200 m²</span>
+      </div>
+    </div>
+
+    <p class="property-desc">
+      Hermoso lote rodeado de naturaleza nativa, con árboles...
+      
+    </p>
+
+  </div>
+
+  <div class="card-footer">
+    <span class="property-price">$ 980.900.000</span>
+    <a href="detallelote010.html" class="btn-detail">Ver Detalle</a>
+    
+  </div>
+
+</div>
+
+            <!-- CARD 11 – Lote B / Venta -->
+            <div class="property-card" data-modalidad="compra" data-dep="Antioquia" data-mun="Santa Fe de Antioquia" data-barrio="San Judas" data-tipo="Lote">
 
             <div class="card-image">
-              <img src="assets/images/imgAnuncio10/foto2cod10.png" alt="Lote A">
-              <span class="badge badge-venta">Venta</span>
-              <button class="btn-favorite" aria-label="Favorito">
+                <img src="assets/images/imgAnuncio11/foto2cod11.png" alt="Lote B">
+                <span class="badge badge-venta">Venta</span>
+                <button class="btn-favorite" aria-label="Favorito">
                 <span class="material-symbols-rounded">favorite</span>
-              </button>
+                </button>
             </div>
 
             <div class="card-body">
 
-              <div class="card-header-row">
-                <h3 class="property-type">Lote en venta La Membrillala</h3>
-                <span class="property-code">cod:010</span>
-              </div>
-
-              <p class="property-location">
-                <span class="material-symbols-rounded">location_on</span>
-                Sta Fe de Ant, La Membrillala
-              </p>
-
-              <div class="card-divider"></div>
-
-              <div class="property-specs">
-                <div class="spec-item">
-                  <span class="material-symbols-rounded">straighten</span>
-                  <span>1.200 m²</span>
-                </div>
-              </div>
-
-              <p class="property-desc">
-                Hermoso lote rodeado de naturaleza nativa, con árboles...
-
-              </p>
-
-            </div>
-
-            <div class="card-footer">
-              <span class="property-price">$ 980.900.000</span>
-              <a href="detallelote010.html" class="btn-detail">Ver Detalle</a>
-
-            </div>
-
-          </div>
-
-          <!-- CARD 11 – Lote B / Venta -->
-          <div class="property-card" data-modalidad="compra" data-dep="Antioquia" data-mun="Santa Fe de Antioquia"
-            data-barrio="San Judas" data-tipo="Lote">
-
-            <div class="card-image">
-              <img src="assets/images/imgAnuncio11/foto2cod11.png" alt="Lote B">
-              <span class="badge badge-venta">Venta</span>
-              <button class="btn-favorite" aria-label="Favorito">
-                <span class="material-symbols-rounded">favorite</span>
-              </button>
-            </div>
-
-            <div class="card-body">
-
-              <div class="card-header-row">
+                <div class="card-header-row">
                 <h3 class="property-type">Lote en venta en San Judas</h3>
                 <span class="property-code">cod:011</span>
-              </div>
+                </div>
 
-              <p class="property-location">
+                <p class="property-location">
                 <span class="material-symbols-rounded">location_on</span>
                 Sta Fe de Ant, San Judas
-              </p>
+                </p>
+                
+                <div class="card-divider"></div>
 
-              <div class="card-divider"></div>
-
-              <div class="property-specs">
+                <div class="property-specs">
                 <div class="spec-item">
-                  <span class="material-symbols-rounded">straighten</span>
-                  <span>2.800 m²</span>
+                    <span class="material-symbols-rounded">straighten</span>
+                    <span>2.800 m²</span>
                 </div>
-              </div>
+                </div>
 
-              <p class="property-desc">
+                <p class="property-desc">
                 Amplio lote plano con palmeras dispersas y pasto silvestre...
-
-              </p>
+               
+                </p>
 
             </div>
 
             <div class="card-footer">
-              <span class="property-price">$ 1.400.000.000</span>
-              <a href="detallelote011.html" class="btn-detail">Ver Detalle</a>
+                <span class="property-price">$ 1.400.000.000</span>
+                <a href="detallelote011.html" class="btn-detail">Ver Detalle</a>
             </div>
-          </div>
+            </div>
 
-          <!-- CARD 012 – Lote / venta  Jmadrid-->
-          <div class="property-card" data-modalidad="arriendo" data-dep="Antioquia" data-mun="Medellín"
-            data-barrio="Laureles" data-tipo="Casa">
+             <!-- CARD 012 – Lote / venta  Jmadrid-->
+          <div class="property-card" data-modalidad="arriendo" data-dep="Antioquia" data-mun="Medellín" data-barrio="Laureles" data-tipo="Casa">
             <div class="card-image">
               <img src="assets/images/Img012/1.jpeg" alt="Apartaestudio">
               <span class="badge badge-alquiler">Venta</span>
-              <button class="btn-favorite" aria-label="Favorito"><span
-                  class="material-symbols-rounded">favorite</span></button>
+              <button class="btn-favorite" aria-label="Favorito"><span class="material-symbols-rounded">favorite</span></button>
             </div>
             <div class="card-body">
               <div class="card-header-row">
                 <h3 class="property-type">Lote</h3>
                 <span class="property-code">cod:012</span>
               </div>
-              <p class="property-location"><span class="material-symbols-rounded">location_on</span>Sta Fe de Ant,
-                Membrillala</p>
+              <p class="property-location"><span class="material-symbols-rounded">location_on</span>Sta Fe de Ant, Membrillala</p>
               <div class="card-divider"></div>
               <div class="property-specs">
-                <div class="spec-item"><span class="material-symbols-rounded">straighten</span><span>1200 m²</span>
-                </div>
-
+                <div class="spec-item"><span class="material-symbols-rounded">straighten</span><span>1200 m²</span></div>
+                
               </div>
             </div>
             <div class="card-footer">
@@ -410,27 +391,24 @@
 
 
           <!-- CARD 017 – Local Comercial / Alquiler -->
-          <div class="property-card" data-modalidad="arriendo" data-dep="Antioquia" data-mun="Santa fe de antioquia"
-            data-barrio="Llano de bolivar" data-tipo="Local comercial">
+          <div class="property-card" data-modalidad="arriendo" data-dep="Antioquia" data-mun="Santa fe de antioquia" data-barrio="Llano de bolivar" data-tipo="Local comercial">
             <div class="card-image">
               <img src="assets/images/imgAnuncio/anuncio_nro_17/Fachada_017.png" alt="Casa">
               <span class="badge badge-alquiler">Alquiler</span>
-              <button class="btn-favorite" aria-label="Favorito"><span
-                  class="material-symbols-rounded">favorite</span></button>
+              <button class="btn-favorite" aria-label="Favorito"><span class="material-symbols-rounded">favorite</span></button>
             </div>
             <div class="card-body">
               <div class="card-header-row">
                 <h3 class="property-type">Local Comercial</h3>
                 <span class="property-code">cod:017</span>
               </div>
-              <p class="property-location"><span class="material-symbols-rounded">location_on</span>Sta Fe de Ant, Llano
-                de Bolivar</p>
+              <p class="property-location"><span class="material-symbols-rounded">location_on</span>Sta Fe de Ant, Llano de Bolivar</p>
               <div class="card-divider"></div>
               <div class="property-specs">
                 <div class="spec-item"><span class="material-symbols-rounded">straighten</span><span>400 m²</span></div>
                 <!--<div class="spec-item"><span class="material-symbols-rounded">bed</span><span>3 hab</span></div>-->
                 <div class="spec-item"><span class="material-symbols-rounded">wc</span><span>2 Baños</span></div>
-                <div class="spec-item"><span class="material-symbols-rounded">local_parking</span><span>Si</span></div>
+              <div class="spec-item"><span class="material-symbols-rounded">local_parking</span><span>Si</span></div>
               </div>
             </div>
             <div class="card-footer">
@@ -439,24 +417,21 @@
             </div>
           </div>
 
-
+          
 
           <!-- CARD 018 – Local Comercial / Venta -->
-          <div class="property-card" data-modalidad="arriendo" data-dep="Antioquia" data-mun="Santa fe de antioquia"
-            data-barrio="La chinca" data-tipo="Local comercial">
+          <div class="property-card" data-modalidad="arriendo" data-dep="Antioquia" data-mun="Santa fe de antioquia" data-barrio="La chinca" data-tipo="Local comercial">
             <div class="card-image">
               <img src="assets/images/imgAnuncio/anuncio_nro_18/Fachada_018.png" alt="Local comercial">
               <span class="badge badge-alquiler">Alquiler</span>
-              <button class="btn-favorite" aria-label="Favorito"><span
-                  class="material-symbols-rounded">favorite</span></button>
+              <button class="btn-favorite" aria-label="Favorito"><span class="material-symbols-rounded">favorite</span></button>
             </div>
             <div class="card-body">
               <div class="card-header-row">
                 <h3 class="property-type">Local Comercial</h3>
                 <span class="property-code">cod:018</span>
               </div>
-              <p class="property-location"><span class="material-symbols-rounded">location_on</span>Sta Fe de Ant, La
-                chinca</p>
+              <p class="property-location"><span class="material-symbols-rounded">location_on</span>Sta Fe de Ant, La chinca</p>
               <div class="card-divider"></div>
               <div class="property-specs">
                 <div class="spec-item"><span class="material-symbols-rounded">straighten</span><span>150 m²</span></div>
@@ -470,79 +445,75 @@
               <a href="detalle_018.html" class="btn-detail">Ver Detalle</a>
             </div>
           </div>
+          
 
-
-          <!-- CARD 019 – Local Comercial / Alquiler -->
-          <div class="property-card" data-modalidad="arriendo" data-dep="Antioquia" data-mun="Medellín"
-            data-barrio="Laureles" data-tipo="Casa">
+            <!-- CARD 019 – Local Comercial / Alquiler -->
+          <div class="property-card" data-modalidad="arriendo" data-dep="Antioquia" data-mun="Medellín" data-barrio="Laureles" data-tipo="Casa">
             <div class="card-image">
               <img src="assets/images/imgAnuncio/local_comercial19(anuncio).png" alt="local_comercial">
               <span class="badge badge-alquiler">Alquiler</span>
-              <button class="btn-favorite" aria-label="Favorito"><span
-                  class="material-symbols-rounded">favorite</span></button>
+              <button class="btn-favorite" aria-label="Favorito"><span class="material-symbols-rounded">favorite</span></button>
             </div>
             <div class="card-body">
               <div class="card-header-row">
                 <h3 class="property-type">Local Comercial</h3>
                 <span class="property-code">cod:019</span>
               </div>
-              <p class="property-location"><span class="material-symbols-rounded">location_on</span>Sta Fe de Ant, calle
-                9</p>
+              <p class="property-location"><span class="material-symbols-rounded">location_on</span>Sta Fe de Ant, calle 9</p>
               <div class="card-divider"></div>
               <div class="property-specs">
-                <div class="spec-item"><span class="material-symbols-rounded">straighten</span><span> 135 m²</span>
-                </div>
+                <div class="spec-item"><span class="material-symbols-rounded">straighten</span><span> 135 m²</span></div>
                 <!--<div class="spec-item"><span class="material-symbols-rounded">bed</span><span>3 hab</span></div>-->
                 <div class="spec-item"><span class="material-symbols-rounded">wc</span><span>1 baño</span></div>
-                <!--<div class="spec-item"><span class="material-symbols-rounded">garage_home</span><span>Si</span></div>-->
+              <!--<div class="spec-item"><span class="material-symbols-rounded">garage_home</span><span>Si</span></div>-->
               </div>
               <div class="card-footer">
-                <span class="property-price">$ 2.000.000</span>
-                <a class="btn-detail" href="detalle019.html">Ver Detalle</a>
-              </div>
+              <span class="property-price">$ 2.000.000</span>
+              <a class="btn-detail" href="detalle019.html" >Ver Detalle</a>
             </div>
+          </div>
 
 
 
 
+          
 
-
-
-          </div><!-- /properties-grid -->
-        </div>
-
+          
+        </div><!-- /properties-grid -->
+            </div>
+            
 
         <!-- Sin resultados -->
         <div class="no-results" id="noResults" style="display:none;">
           <p>No hay propiedades que coincidan con los filtros.</p>
-        </div>
+        </div> 
 
       </div>
     </section>
 
   </main>
 
-  <footer></footer>
+  <footer></footer> 
 
-  <div class="overlay" id="overlay" onclick="cerrarModalFuera(event)">
-    <div class="modal-regis" id="modal">
+    <div class="overlay" id="overlay" onclick="cerrarModalFuera(event)">
+      <div class="modal-regis" id="modal">
 
-      <button class="btn-close" onclick="cerrarModal()" title="Cerrar">✕</button>
+        <button class="btn-close" onclick="cerrarModal()" title="Cerrar">✕</button>
 
-      <div class="modal-icon">🔒</div>
+        <div class="modal-icon">🔒</div>
 
-      <h2>Para ver más detalles del anuncio debes registrarte</h2>
-      <p>Crea tu cuenta y accede a toda la información, fotos, precio y datos de contacto del publicador.</p>
+        <h2>Para ver más detalles del anuncio debes registrarte</h2>
+        <p>Crea tu cuenta y accede a toda la información, fotos, precio y datos de contacto del publicador.</p>
 
-      <div class="modal-actions">
-        <button class="btn-registrarse" onclick="irARegistro()">No tienes cuenta · Registrate</button>
-        <button class="btn-login" onclick="irALogin()">Ya tienes cuenta · Iniciar sesión</button>
+        <div class="modal-actions">
+          <button class="btn-registrarse" onclick="irARegistro()">No tienes cuenta · Registrate</button>
+          <button class="btn-login" onclick="irALogin()">Ya tienes cuenta · Iniciar sesión</button>
+        </div>
+
       </div>
-
     </div>
-  </div>
-  </main>
-  <footer></footer>
+  </main> 
+  <footer></footer> 
 
 
   <script src="./assets/js/anuncio.js" defer></script>
@@ -551,5 +522,4 @@
   <script src="./assets/js/navegacion.js"></script>
 
 </body>
-
 </html>
