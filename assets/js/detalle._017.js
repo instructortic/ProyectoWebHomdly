@@ -1,6 +1,15 @@
 //array con las 7 fotos de la propiedad
 // Cada objeto tiene:URL de la imagen
-const fotos = JSON.parse(document.getElementById('galeria').dataset.fotos);
+const fotos = [
+  { src: 'assets/images/imgAnuncio/anuncio_nro_17/Fachada_017.png', label: 'Fachada' },
+  { src: 'assets/images/imgAnuncio/anuncio_nro_17/Ingreso_017.png', label: 'Ingreso' },
+  { src: 'assets/images/imgAnuncio/anuncio_nro_17/Interior1_017.png', label: 'Interior_1' },
+  { src: 'assets/images/imgAnuncio/anuncio_nro_17/Interior2_017.png', label: 'Interior_2' },
+  { src: 'assets/images/imgAnuncio/anuncio_nro_17/Bano_017.png', label: 'Baño' },
+  { src: 'assets/images/imgAnuncio/anuncio_nro_17/Parking_017.png', label: 'Parqueadero' },
+  { src: 'assets/images/imgAnuncio/anuncio_nro_17/Interior_lleno_017.png', label: 'Interior_Lleno' },
+  { src: 'assets/images/imgAnuncio/anuncio_nro_17/Fachada_Nocturno_017.png', label: 'Fachada_2' }
+];
 
 
 //  variables que recuerdan en qué foto estamos
@@ -193,4 +202,25 @@ modalOverlay.addEventListener('click', e => {
   if (e.target === modalOverlay) closeModal();
 });
 
+
+
+//Boton mostrar todo
+function mostrarTodo() {
+  // Reiniciar selects
+  document.getElementById("dep").value = "";
+  document.getElementById("mun").value = "";
+  document.getElementById("barrio").value = "";
+  document.getElementById("tipo").value = "";
+  document.getElementById("codigo").value = "";
+
+  // Mostrar todas las tarjetas
+  const cards = document.querySelectorAll(".property-card");
+
+  cards.forEach(card => {
+    card.style.display = "block";
+  });
+
+  // Ocultar mensaje de no resultados
+  document.getElementById("noResults").style.display = "none";
+}
 

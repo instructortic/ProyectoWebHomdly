@@ -1,6 +1,7 @@
 //array con las 7 fotos de la propiedad
 // Cada objeto tiene:URL de la imagen
-const fotos = JSON.parse(document.getElementById('galeria').dataset.fotos);
+const galeria = document.getElementById('galeria');
+const fotos = JSON.parse(galeria.dataset.fotos);
 
 
 //  variables que recuerdan en qué foto estamos

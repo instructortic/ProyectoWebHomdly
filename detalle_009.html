@@ -18,9 +18,7 @@
 </head>
 <body>
 
-<!-- ═══════════════════════════════════════════════════════════════════════════
-     MODAL GALERÍA  (estructura fija, igual en todos los detalles)
-════════════════════════════════════════════════════════════════════════════ -->
+<!--MODAL GALERÍA -->
 <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true">
   <div class="modal-box">
     <div class="modal-header">
@@ -42,9 +40,7 @@
 </div>
 
 
-<!-- ═══════════════════════════════════════════════════════════════════════════
-     PÁGINA
-════════════════════════════════════════════════════════════════════════════ -->
+<!--PÁGINA-->
 <div class="page">
 
   <div class="page-close-row">
@@ -53,39 +49,29 @@
     </a>
   </div>
 
-  <!-- ── FILA SUPERIOR: Galería + Tarjeta info ─────────────────────────── -->
+  <!--Galería y Tarjeta info  -->
   <div class="top-row">
 
-    <!-- GALERÍA
-         ▸ data-fotos  → array JSON con {src, label} de cada foto
-         El JS lee este atributo; no hay ningún array en el .js
-    -->
+    <!-- GALERÍA-->
     <div class="gallery-col">
       <div class="gallery-grid">
 
         <div class="main-img-wrap" id="mainImgWrap">
-          <span class="badge-alquiler">Alquiler</span>
+          <span class="badge-alquiler">Venta</span>
           <img id="mainImg" src="" alt="Imagen principal">
           <div class="img-counter" id="imgCounter">1 / 7</div>
         </div>
 
-        <!--
-          ╔══════════════════════════════════════════════════════════╗
-          ║  AQUÍ VAN LAS FOTOS  ←  cambia solo esto en cada HTML  ║
-          ╚══════════════════════════════════════════════════════════╝
-          id="galeria"   → solo guarda el JSON, display:none, no se ve
-          id="thumbsCol" → contenedor visual donde el JS pinta las miniaturas
-        -->
+        <!--fotos-->
         <div id="galeria" style="display:none"
           data-fotos='[
-           {"img src="""">}
-             {"img src":"E:\homdly_Semilla\assets\images\alldetalles/principal.jpg"},
-            {"src":"https://umbral.co/wp-content/uploads/2021/11/laurel-internas-22-1.jpg",   "label":"Cocina integral"},
-            {"src":"https://umbral.co/wp-content/uploads/2021/11/DSC0980-1200x801.jpg",       "label":"Habitación principal"},
-            {"src":"https://umbral.co/wp-content/uploads/2021/11/menta-interior-10.jpg",      "label":"Baño completo"},
-            {"src":"https://gprovivienda.com/wp-content/uploads/2019/03/provivienda-van-gogh-modelo-D-sala-comedor-2.jpg","label":"Balcón"},
-            {"src":"https://images.ctfassets.net/8lc7xdlkm4kt/6bYolzLQSPgZawCDlHb9qr/ca35368f17fc3143fe969c9b074a73de/mint-apartamentos-barranquilla-sala.jpg","label":"Segundo ambiente"},
-            {"src":"https://img.properati.com/eyJidWNrZXQiOiJwcmQtbGlmdWxsY29ubmVjdC1wcm9qZWN0cy1hZG1pbi1pbWFnZXMiLCJrZXkiOiJjNmNhYzQ3My04YTMwLTQzMWYtYTcxMi05NzkwZTEyYmIwZmEvYzZjYWM0NzMtOGEzMC00MzFmLWE3MTItOTc5MGUxMmJiMGZhX2Y5ZGExNzViLTdmMGQtNGVmYi04MmY0LWVlMTdlMmNhMTY2Yy5qcGciLCJicmFuZCI6InByb3BlcmF0aSIsImVkaXRzIjp7InJvdGF0ZSI6bnVsbCwicmVzaXplIjp7IndpZHRoIjo2NDAsImhlaWdodCI6NDgwLCJmaXQiOiJjb3ZlciJ9fX0=","label":"Vista exterior"}
+            {"src":"https://www.ciencuadras.com/blog/wp-content/uploads/2022/06/Portada-consejos-para-invertir-en-un-lote.jpg","label":"Lote"},
+            {"src":"https://ciudadjaragua.com/wp-content/uploads/2020/12/blog-7-caracteristicas-que-debes-observar-al-elegir-un-lote-de-terreno.png", "label":"Lote"},
+            {"src":"https://th.bing.com/th/id/R.e70736ff4bc573424e2bef7ab418228a?rik=I%2bxYjjpdPgOEHA&pid=ImgRaw&r=0",       "label":"Lote"},
+            {"src":"https://th.bing.com/th/id/R.e70736ff4bc573424e2bef7ab418228a?rik=I%2bxYjjpdPgOEHA&pid=ImgRaw&r=0",      "label":"Lote"},
+            {"src":"https://img.magnific.com/fotos-gratis/vista-do-terreno-para-o-desenvolvimento-imobiliario-e-de-negocios_23-2149916719.jpg","label":"Lote"},
+            {"src":"https://photos.zillowstatic.com/fp/11a39b1a6ace698568c36f92ea80e9a9-cc_ft_1536.jpg","label":"Lote"},
+            {"src":"https://photos.zillowstatic.com/fp/11a39b1a6ace698568c36f92ea80e9a9-cc_ft_1536.jpg","label":"Lote"}
           ]'>
         </div>
 
@@ -95,36 +81,33 @@
       </div>
 
       <div class="below-gallery">
-        <span class="codigo-text">Código: 260094</span>
+        <span class="codigo-text">Código: 009</span>
         <div class="gallery-actions">
           <button class="action-link">&#9825; Guardar</button>
           <button class="action-link">&#10548; Compartir</button>
         </div>
       </div>
     </div>
-    <!-- /gallery-col -->
-<img src="">
+    <!--gallery-col -->
+
     <!-- INFO CARD -->
     <div class="right-col">
       <div class="info-card">
-        <h2 class="info-title">Apartaestudio</h2>
-        <p class="info-location">&#128205; Barrio El Llano Bolívar, Santa Fe de Antioquia</p>
+        <h2 class="info-title">Lote</h2>
+        <p class="info-location">&#128205; Vereda El Espinal, Santa Fe de Antioquia</p>
 
         <div class="info-specs">
-          <div class="info-spec"><i class="fa-solid fa-bed spec-ico"></i><span class="spec-label">2 Habitaciones</span></div>
-          <div class="info-spec"><i class="fa-solid fa-ruler-combined spec-ico"></i><span class="spec-label">80 m²</span></div>
-          <div class="info-spec"><i class="fa-solid fa-shower spec-ico"></i><span class="spec-label">1 Baño</span></div>
-          <div class="info-spec"><i class="fa-solid fa-building spec-ico"></i><span class="spec-label">Sin parqueadero</span></div>
+          <div class="info-spec"><i class="fa-solid fa-ruler-combined spec-ico"></i><span class="spec-label">500 m²</span></div>
         </div>
 
-        <div class="info-price">$ 2.000.000</div>
+        <div class="info-price">$ 500.000.000</div>
 
         <div class="agente-contact-row">
           <div class="agente-side">
             <div class="agente-avatar">
               <img src="https://st3.depositphotos.com/1003989/17911/i/450/depositphotos_179114944-stock-photo-smiling-businesswoman-wearing-black-suit.jpg" alt="Tatiana">
             </div>
-            <span class="agente-nombre">Tatiana Ortiz V.</span>
+            <span class="agente-nombre">Yeiner Castillo.</span>
           </div>
           <div class="contact-side">
             <span class="contactame-label">Contáctame:</span>
@@ -135,7 +118,7 @@
               <a href="tel:+57300000000" class="ci ci-phone" title="Llamar">
                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
               </a>
-              <a href="mailto:tatiana@homdly.co" class="ci ci-email" title="Email">
+              <a href="mailto:yeiner@homdly.co" class="ci ci-email" title="Email">
                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
               </a>
             </div>
@@ -151,36 +134,30 @@
 
   <div class="page-divider"></div>
 
-  <!-- ── DETALLE: Descripción + Mapa ───────────────────────────────────── -->
+  <!-- ── DETALLE Descripción y mapa-->
   <div class="detail-section">
 
     <div class="detail-left">
-      <div class="price-heading">$ 2.000.000</div>
+      <div class="price-heading">$ 500.000.000</div>
       <div class="prop-subtitle">
-        Apartamento en Arriendo<br>
-        <span>Sta Fe de Ant, Llano de Bolívar</span>
+        Lote en Venta<br>
+        <span>Sta Fe de Ant, El Espinal</span>
       </div>
 
       <div class="section-label">Descripción</div>
       <div class="description">
-        <p>Descubra la elegancia y el diseño moderno en este espectacular apartaestudio de 90 metros cuadrados. Su iluminación inteligente transforma cada rincón para un ambiente amplio y un descanso reparador.</p>
-        <p>Pensado para quienes buscan calidad, inmersos en la naturaleza de villa circuiar, reúne en Manzanas el primor, con espacios de descanso en terraza y dos cocinas: samorización individual y sin reciente.</p>
-        <p>Un hogar ideal para quienes buscan calidad y diseño, disfrutando de la privacidad de sus ambientes.</p>
+        <p>Invierte en tranquilidad y valorización. Este hermoso lote campestre de 500 m² en Santa Fe de Antioquia combina naturaleza, 
+          excelente ubicación y un entorno exclusivo. Terreno plano, rodeado de 
+          zonas verdes y listo para construir el proyecto que siempre soñaste. Ideal para descanso, 
+          vivienda o inversión. Documentación al día y gran proyección de valorización.</p>
+
+        <p> El lote cuenta con terreno plano y aprovechable, rodeado de hermosos árboles y amplias zonas verdes que brindan frescura, privacidad y 
+          una vista natural encantadora. Su ubicación estratégica permite fácil acceso a vías principales, transporte,
+          comercios y servicios esenciales, combinando comodidad y tranquilidad en un solo lugar..</p>
+        
       </div>
 
-      <div class="amenities-title">Características del Inmueble</div>
-      <div class="amenities-grid">
-        <div class="amenity"><div class="amenity-icon"><i class="bi bi-box"></i></div>Closet</div>
-        <div class="amenity"><div class="amenity-icon"><i class="bi bi-car-front-fill"></i></div>Parqueadero</div>
-        <div class="amenity"><div class="amenity-icon"><i class="bi bi-water"></i></div>Piscina</div>
-        <div class="amenity"><div class="amenity-icon"><i class="bi bi-arrow-up-square"></i></div>Ascensor</div>
-        <div class="amenity"><div class="amenity-icon"><i class="bi bi-camera-video"></i></div>Cuarto útil</div>
-        <div class="amenity"><div class="amenity-icon"><i class="bi bi-heart-pulse"></i></div>Mascotas</div>
-        <div class="amenity"><div class="amenity-icon"><i class="bi bi-building"></i></div>Administ.</div>
-        <div class="amenity"><div class="amenity-icon"><i class="bi bi-fire"></i></div>Zona BBQ</div>
-        <div class="amenity"><div class="amenity-icon"><i class="bi bi-thermometer-sun"></i></div>Climatización</div>
-        <div class="amenity"><div class="amenity-icon"><i class="bi bi-lamp"></i></div>Amoblado</div>
-      </div>
+     
     </div>
 
     <div class="detail-right">
@@ -197,7 +174,7 @@
 
   <div class="page-divider"></div>
 
-  <!-- ── LISTADOS RELACIONADOS ─────────────────────────────────────────── -->
+  <!-- LISTADOS RELACIONADOS -->
   <div class="related-section">
     <h3 class="related-title">Propiedades relacionadas</h3>
     <div class="carousel-wrap">
@@ -210,7 +187,7 @@
 
         <div class="listing-card">
           <div class="card-img-wrap">
-            <img src="assets/images/casa.jpg" alt="Casa">
+            <img src="assets/images/imgAnuncio/casa.jpg" alt="Casa">
             <span class="card-badge badge-alq">Alquiler</span>
             <span class="card-code">cod:4789L</span>
           </div>
@@ -232,7 +209,7 @@
 
         <div class="listing-card">
           <div class="card-img-wrap">
-            <img src="assets/images/apartamento.jpg" alt="Apartamento">
+            <img src="assets/images/imgAnuncio/apartamento.jpg" alt="Apartamento">
             <span class="card-badge badge-alq">Alquiler</span>
             <span class="card-code">cod:12345</span>
           </div>
@@ -254,7 +231,7 @@
 
         <div class="listing-card">
           <div class="card-img-wrap">
-            <img src="assets/images/lote.jpg" alt="Lote">
+            <img src="assets/images/imgAnuncio/lote.jpg" alt="Lote">
             <span class="card-badge badge-venta-c">Venta</span>
             <span class="card-code">cod:12345</span>
           </div>
@@ -273,7 +250,7 @@
 
         <div class="listing-card">
           <div class="card-img-wrap">
-            <img src="assets/images/casa.jpg" alt="Casa">
+            <img src="assets/images/imgAnuncio/casa.jpg" alt="Casa">
             <span class="card-badge badge-venta-c">Venta</span>
             <span class="card-code">cod:99001</span>
           </div>
@@ -304,6 +281,6 @@
 
 </div><!-- /page -->
 
-<script src="./assets/js/detalle.js"></script>
+<script src="./assets/js/detalleCopia.js"></script>
 </body>
 </html>
