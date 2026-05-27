@@ -1,13 +1,14 @@
 //array con las 7 fotos de la propiedad
 // Cada objeto tiene:URL de la imagen
 const fotos = [
-  { src: 'assets/images/Img012/1.jpeg', label: 'Principal' },
-  { src: 'assets/images/Img012/2.jpeg', label: 'Medidas' },
-  { src: 'assets/images/Img012/3.jpeg', label: 'Medidas desde arriba' },
-  { src: 'assets/images/Img012/4.jpeg', label: 'Derecha abajo' },
-  { src: 'assets/images/Img012/5.jpeg', label: 'Derecha arriba' },
-  { src: 'assets/images/Img012/6.jpeg', label: 'Desde el frente' },
-  { src: 'assets/images/Img012/7.jpeg', label: 'Desde atras' }
+  { src: 'assets/images/imgAnuncio/anuncio_nro_18/Fachada_018.png', label: 'Fachada' },
+  { src: 'assets/images/imgAnuncio/anuncio_nro_18/Ingreso_018.png', label: 'Ingreso' },
+  { src: 'assets/images/imgAnuncio/anuncio_nro_18/Fondo_018.png', label: 'Fondo' },
+  { src: 'assets/images/imgAnuncio/anuncio_nro_18/Puerta_018.png', label: 'Puerta' },
+  { src: 'assets/images/imgAnuncio/anuncio_nro_18/Bano_018.png', label: 'Baño' },
+  { src: 'assets/images/imgAnuncio/anuncio_nro_18/Bodega_018.png', label: 'Bodega' },
+  { src: 'assets/images/imgAnuncio/anuncio_nro_18/Interior_lleno_018.png', label: 'Interior_Lleno' },
+  { src: 'assets/images/imgAnuncio/anuncio_nro_18/Fachada_Nocturno_018.png', label: 'Vista exterior_Nocturna' }
 ];
 
 
@@ -201,4 +202,25 @@ modalOverlay.addEventListener('click', e => {
   if (e.target === modalOverlay) closeModal();
 });
 
+
+
+//Boton mostrar todo
+function mostrarTodo() {
+  // Reiniciar selects
+  document.getElementById("dep").value = "";
+  document.getElementById("mun").value = "";
+  document.getElementById("barrio").value = "";
+  document.getElementById("tipo").value = "";
+  document.getElementById("codigo").value = "";
+
+  // Mostrar todas las tarjetas
+  const cards = document.querySelectorAll(".property-card");
+
+  cards.forEach(card => {
+    card.style.display = "block";
+  });
+
+  // Ocultar mensaje de no resultados
+  document.getElementById("noResults").style.display = "none";
+}
 
