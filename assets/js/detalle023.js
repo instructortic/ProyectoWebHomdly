@@ -5,8 +5,8 @@ const fotos = [
   { src: 'assets/images/anuncio023/2.jpg', label: 'Sala principal' },
   { src: 'assets/images/anuncio023/3.jpg', label: 'Sala principal' },
   {src: 'assets/images/anuncio023/4.jpg', label: 'Sala principal' },
-   {src: 'assets/images/anuncio023/5.jpg', label: 'Sala principal' },
-     { src: 'assets/images/anuncio023/6.jpg', label: 'Sala principal' },
+ {src: 'assets/images/anuncio023/5.jpg', label: 'Sala principal' },
+    { src: 'assets/images/anuncio023/6.jpg', label: 'Sala principal' },
 ];
 
 
