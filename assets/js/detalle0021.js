@@ -1,21 +1,6 @@
 //array con las 7 fotos de la propiedad
 // Cada objeto tiene:URL de la imagen
-const fotos = [
-  { src: 'assets/images/anuncio022/2.jpg', label: 'habitacion  principal' },
-  { src: 'assets/images/anuncio022/5.jpg', label: 'sala' },
-  { src: 'assets/images/anuncio022/4.jpg', label: 'terraza vista' },
-  { src: 'assets/images/anuncio022/7.jpg', label: 'picina' },
-<<<<<<< Updated upstream
-  { src: 'assets/images/anuncio023/3.jpg', label: 'segunda habitacion' },
-=======
-  { src: 'assets/images/anuncio022/3.jpg', label: 'segunda habitacion' },
->>>>>>> Stashed changes
-  { src: 'assets/images/anuncio022/6.jpg', label: 'cocina' },
-  { src: 'assets/images/anuncio022/8.jpg', label: 'jacusi' },
-  { src: 'assets/images/anuncio022/9.jpg', label: 'baños' },
-
-
-];
+const fotos = JSON.parse(document.getElementById('galeria').dataset.fotos);
 
 
 //  variables que recuerdan en qué foto estamos
@@ -207,5 +192,3 @@ modalClose.addEventListener('click', closeModal);
 modalOverlay.addEventListener('click', e => {
   if (e.target === modalOverlay) closeModal();
 });
-
-

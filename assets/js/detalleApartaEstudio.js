@@ -2,7 +2,10 @@
 // Cada objeto tiene:URL de la imagen
 const fotos = [
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 <<<<<<< HEAD
 <<<<<<< HEAD:assets/js/detalle001.js
   { src: "assets/images/imgAnuncio001/1.jpeg", label: "Sala principal" },
@@ -24,7 +27,11 @@ const fotos = [
 ];
 =======
 =======
+<<<<<<< Updated upstream
 >>>>>>> 29e3af9fc82a8d7eb5532e23952292b4452fdb62
+>>>>>>> Stashed changes
+=======
+>>>>>>> abbc98709d97d28d4780f3159c127920039d32b3
 >>>>>>> Stashed changes
   { src: '../assets/images/anuncio014/aparta03.jpg', label:'apartaestudio'},
 
@@ -45,11 +52,18 @@ const fotos = [
 
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
 <<<<<<< HEAD
 >>>>>>> shiguita:assets/js/detalleApartaEstudio.js
 =======
 >>>>>>> 29e3af9fc82a8d7eb5532e23952292b4452fdb62
+>>>>>>> Stashed changes
+=======
+<<<<<<< HEAD
+>>>>>>> shiguita:assets/js/detalleApartaEstudio.js
+=======
+>>>>>>> abbc98709d97d28d4780f3159c127920039d32b3
 >>>>>>> Stashed changes
 
 //  variables que recuerdan en qué foto estamos
@@ -58,12 +72,15 @@ const fotos = [
 
 let activeIndex = 0;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 let modalIndex  = 0;
 
 
 // getElementById busca el elemento por su id y lo guarda
 
 =======
+=======
+>>>>>>> Stashed changes
 <<<<<<< HEAD
 let modalIndex = 0;
 
@@ -87,6 +104,9 @@ let modalIndex  = 0;
 
 // getElementById busca el elemento por su id y lo guarda
 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 const mainImg          = document.getElementById('mainImg');          // <img> de la foto grande
 const imgCounter       = document.getElementById('imgCounter');       // contador "1 / 7"
@@ -102,8 +122,12 @@ const modalClose       = document.getElementById('modalClose');       // botón 
 const btnVisita        = document.getElementById('btnVisita');        // botón "Solicitar una visita"
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
 >>>>>>> 29e3af9fc82a8d7eb5532e23952292b4452fdb62
+>>>>>>> Stashed changes
+=======
+>>>>>>> abbc98709d97d28d4780f3159c127920039d32b3
 >>>>>>> Stashed changes
 
 // buildThumbsCol()
@@ -111,8 +135,11 @@ const btnVisita        = document.getElementById('btnVisita');        // botón 
 
 function buildThumbsCol() {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   thumbsCol.innerHTML = ''; 
 =======
+=======
+>>>>>>> Stashed changes
 <<<<<<< HEAD
   thumbsCol.innerHTML = "";
 >>>>>>> Stashed changes
@@ -141,7 +168,11 @@ function buildThumbsCol() {
 
     // Crea la imagen y le asigna la URL del array fotos
     const img = document.createElement('img');
+<<<<<<< Updated upstream
 >>>>>>> 29e3af9fc82a8d7eb5532e23952292b4452fdb62
+>>>>>>> Stashed changes
+=======
+>>>>>>> abbc98709d97d28d4780f3159c127920039d32b3
 >>>>>>> Stashed changes
     img.src = fotos[i].src;
     img.alt = fotos[i].label;
@@ -151,10 +182,13 @@ function buildThumbsCol() {
       // La tercera miniatura lleva el overlay oscuro con "+N"
       const remaining = fotos.length - 3; // calcula cuántas fotos no se ven (7 - 3 = 4)
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       const ov = document.createElement('div');
       ov.className   = 'more-overlay';
       ov.textContent = '+' + remaining; // muestra "+4"
 =======
+=======
+>>>>>>> Stashed changes
 <<<<<<< HEAD
       const ov = document.createElement("div");
       ov.className = "more-overlay";
@@ -179,7 +213,11 @@ function buildThumbsCol() {
     } else {
       // Las miniaturas 1 y 2 cambian la foto principal al hacer clic
       div.addEventListener('click', () => setMainImage(i));
+<<<<<<< Updated upstream
 >>>>>>> 29e3af9fc82a8d7eb5532e23952292b4452fdb62
+>>>>>>> Stashed changes
+=======
+>>>>>>> abbc98709d97d28d4780f3159c127920039d32b3
 >>>>>>> Stashed changes
     }
 
@@ -188,6 +226,7 @@ function buildThumbsCol() {
 }
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
 =======
 <<<<<<< HEAD
@@ -195,14 +234,23 @@ function buildThumbsCol() {
 
 >>>>>>> 29e3af9fc82a8d7eb5532e23952292b4452fdb62
 >>>>>>> Stashed changes
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> abbc98709d97d28d4780f3159c127920039d32b3
+>>>>>>> Stashed changes
 // setMainImage(index)
 // Cambia la foto grande de la galería principal
 // Hace un efecto fade: desvanece → cambia src → reaparece
 
 function setMainImage(index) {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   mainImg.classList.add('fade'); // agrega clase fade → CSS lo pone en opacity: 0
 =======
+=======
+>>>>>>> Stashed changes
 <<<<<<< HEAD
   mainImg.classList.add("fade"); // agrega clase fade → CSS lo pone en opacity: 0
 >>>>>>> Stashed changes
@@ -269,15 +317,22 @@ buildThumbsCol();                                // construye las 3 miniaturas
 // Al hacer clic en la foto grande, abre el modal en la foto actual
 mainImgWrap.addEventListener('click', () => openModal(activeIndex));
 
+<<<<<<< Updated upstream
 >>>>>>> 29e3af9fc82a8d7eb5532e23952292b4452fdb62
+>>>>>>> Stashed changes
+=======
+>>>>>>> abbc98709d97d28d4780f3159c127920039d32b3
 >>>>>>> Stashed changes
 
 // buildModalThumbs() Construye las 7 miniaturas dentro del modal (todas las fotos)
 
 function buildModalThumbs() {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   modalThumbs.innerHTML = ''; // limpia antes de construir
 =======
+=======
+>>>>>>> Stashed changes
 <<<<<<< HEAD
   modalThumbs.innerHTML = ""; // limpia antes de construir
 >>>>>>> Stashed changes
@@ -300,7 +355,11 @@ function buildModalThumbs() {
     div.dataset.index = i;
 
     const img = document.createElement('img');
+<<<<<<< Updated upstream
 >>>>>>> 29e3af9fc82a8d7eb5532e23952292b4452fdb62
+>>>>>>> Stashed changes
+=======
+>>>>>>> abbc98709d97d28d4780f3159c127920039d32b3
 >>>>>>> Stashed changes
     img.src = foto.src;
     img.alt = foto.label;
@@ -308,20 +367,31 @@ function buildModalThumbs() {
 
     // Al hacer clic en una miniatura del modal, cambia la foto grande del modal
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     div.addEventListener('click', () => setModalImage(i));
 =======
+=======
+>>>>>>> Stashed changes
 <<<<<<< HEAD
     div.addEventListener("click", () => setModalImage(i));
 =======
     div.addEventListener('click', () => setModalImage(i));
+<<<<<<< Updated upstream
 >>>>>>> 29e3af9fc82a8d7eb5532e23952292b4452fdb62
+>>>>>>> Stashed changes
+=======
+>>>>>>> abbc98709d97d28d4780f3159c127920039d32b3
 >>>>>>> Stashed changes
     modalThumbs.appendChild(div);
   });
 }
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
+=======
+<<<<<<< HEAD
+>>>>>>> Stashed changes
 =======
 <<<<<<< HEAD
 >>>>>>> Stashed changes
@@ -345,14 +415,21 @@ function setModalImage(index) {
   modalMainImg.classList.add('fade'); // inicia el fade
 
   setTimeout(() => {
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     modalIndex                   = index;
     modalMainImg.src             = fotos[index].src;  // ← cambia la foto del modal
     modalMainImg.alt             = fotos[index].label;
     modalCounterText.textContent = (index + 1) + ' / ' + fotos.length; // actualiza "3 / 7"
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
 >>>>>>> 29e3af9fc82a8d7eb5532e23952292b4452fdb62
+>>>>>>> Stashed changes
+=======
+>>>>>>> abbc98709d97d28d4780f3159c127920039d32b3
 >>>>>>> Stashed changes
 
     // Desactiva la flecha ← si estamos en la primera foto
@@ -362,9 +439,12 @@ function setModalImage(index) {
 
     // Marca como .active la miniatura correspondiente en el modal
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     document.querySelectorAll('#modalThumbs .modal-thumb').forEach(t => {
       t.classList.toggle('active', parseInt(t.dataset.index) === index);
 =======
+=======
+>>>>>>> Stashed changes
 <<<<<<< HEAD
     document.querySelectorAll("#modalThumbs .modal-thumb").forEach((t) => {
       t.classList.toggle("active", parseInt(t.dataset.index) === index);
@@ -443,28 +523,42 @@ function closeModal() {
 
 // Flecha ← : va a la foto anterior
 modalPrev.addEventListener('click', () => {
+<<<<<<< Updated upstream
 >>>>>>> 29e3af9fc82a8d7eb5532e23952292b4452fdb62
+>>>>>>> Stashed changes
+=======
+>>>>>>> abbc98709d97d28d4780f3159c127920039d32b3
 >>>>>>> Stashed changes
   if (modalIndex > 0) setModalImage(modalIndex - 1);
 });
 
 // Flecha → : va a la foto siguiente
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 modalNext.addEventListener('click', () => {
 =======
+=======
+>>>>>>> Stashed changes
 <<<<<<< HEAD
 modalNext.addEventListener("click", () => {
 =======
 modalNext.addEventListener('click', () => {
+<<<<<<< Updated upstream
 >>>>>>> 29e3af9fc82a8d7eb5532e23952292b4452fdb62
+>>>>>>> Stashed changes
+=======
+>>>>>>> abbc98709d97d28d4780f3159c127920039d32b3
 >>>>>>> Stashed changes
   if (modalIndex < fotos.length - 1) setModalImage(modalIndex + 1);
 });
 
 // Botón ✕ : cierra el modal
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 modalClose.addEventListener('click', closeModal);
 =======
+=======
+>>>>>>> Stashed changes
 <<<<<<< HEAD
 modalClose.addEventListener("click", closeModal);
 >>>>>>> Stashed changes
@@ -475,9 +569,12 @@ modalOverlay.addEventListener('click', e => {
   if (e.target === modalOverlay) closeModal();
 });
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
 
 =======
+=======
+>>>>>>> Stashed changes
 =======
 modalClose.addEventListener('click', closeModal);
 
@@ -488,5 +585,9 @@ modalOverlay.addEventListener('click', e => {
 });
 
 
+<<<<<<< Updated upstream
 >>>>>>> 29e3af9fc82a8d7eb5532e23952292b4452fdb62
+>>>>>>> Stashed changes
+=======
+>>>>>>> abbc98709d97d28d4780f3159c127920039d32b3
 >>>>>>> Stashed changes
