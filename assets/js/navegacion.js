@@ -82,19 +82,19 @@ header.innerHTML = `
       <div class="col">
         <h4>Sobre Homdly</h4>
         <a href="#">Destaca tu Publicación</a>  
-        <a href="soporte.html">Preguntas Frecuentes</a>
-        <a href="Politica privacidad.html">Política de Privacidad</a>
-        <a href="Politica seguridad cookies.html">Política de Seguridad Cookies</a>
+        <a href="../soporte.html">Preguntas Frecuentes</a>
+        <a href="../Politica privacidad.html">Política de Privacidad</a>
+        <a href="../Politica seguridad cookies.html">Política de Seguridad Cookies</a>
       </div>
   
       <!-- Columna 2 -->
       <div class="col">
         <h4>Mapa del Sitio</h4>
-        <a href="index.html">Inicio</a>
-        <a href="quienesSomos.html">¿Quiénes somos?</a>
-        <a href="anuncio.html">Propiedades</a>
-        <a href="soporte.html">Soporte</a>
-        <a href="contacto.html">Contacto</a>
+        <a href="../index.html">Inicio</a>
+        <a href="../quienesSomos.html">¿Quiénes somos?</a>
+        <a href="../anuncio.html">Propiedades</a>
+        <a href="../soporte.html">Soporte</a>
+        <a href="../contacto.html">Contacto</a>
 
       <a href="#" onclick="document.getElementById('modal-overlay').classList.add('active'); return false;">Inicio de sesión</a>
       <a href="#" onclick="document.getElementById('modal-overlay').classList.add('active'); document.getElementById('btn-sign-up').click(); return false;">Registro</a>
