@@ -247,7 +247,29 @@
             <img id="mainImg" src="" alt="Imagen principal">
             <div class="img-counter" id="imgCounter">1 / 7</div>
           </div>
-          <div class="thumbs-col" id="thumbsCol"></div>
+            <!--
+        este es el codigo que implemente en detalle.html: 
+
+          ╔══════════════════════════════════════════════════════════╗
+          ║  AQUÍ VAN LAS FOTOS  ←  cambia solo esto en cada HTML  ║
+          ╚══════════════════════════════════════════════════════════╝
+          id="galeria"   → solo guarda el JSON, display:none, no se ve
+          id="thumbsCol" → contenedor visual donde el JS pinta las miniaturas
+        -->
+      <div id="galeria" style="display:none"
+              data-fotos='[ 
+              {"src":"assets/images/imgDetalle0020y0021/HOTEL2.jpg","label":"1"},
+              {"src":"assets/images/imgDetalle0020y0021/HabitacionHotel2.jpg","label":"IMG2"},
+              {"src":"assets/images/imgDetalle0020y0021/HabitacionHotel2Foto2.jpg","label":"IMG3"},
+              {"src":"assets/images/imgDetalle0020y0021/HabitacionHotel2Foto3.jpg","label":"IMG4"},
+              {"src":"assets/images/imgDetalle0020y0021/HabitacionHotel2Foto4.jpg"},       
+              {"src":"assets/images/imgDetalle0020y0021/HabitacionHotel2Foto5.jpg","label":"IMG6"},
+              {"src":"assets/images/imgDetalle0020y0021/HabitacionHotel2Foto6.jpg","label":"IMG7"}
+            ]'>
+            </div>
+              
+        <div class="thumbs-col" id="thumbsCol"></div>
+        <!-- /galeria -->
         </div>
         <div class="below-gallery">
           <span class="codigo-text">Código: 0020</span>
