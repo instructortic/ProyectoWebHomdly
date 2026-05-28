@@ -243,12 +243,39 @@
       <div class="gallery-col">
         <div class="gallery-grid">
           <div class="main-img-wrap" id="mainImgWrap">
-            <span class="badge-alquiler">Alquiler</span>
+            <span class="badge-alquiler">Venta</span>
             <img id="mainImg" src="" alt="Imagen principal">
             <div class="img-counter" id="imgCounter">1 / 7</div>
           </div>
-          <div class="thumbs-col" id="thumbsCol"></div>
-        </div>
+        
+        
+         <!--
+        este es el codigo que implemente en detalle.html: 
+
+╔══════════════════════════════════════════════════════════╗
+          ║  AQUÍ VAN LAS FOTOS  ←  cambia solo esto en cada HTML  ║
+          ╚══════════════════════════════════════════════════════════╝
+          id="galeria"   → solo guarda el JSON, display:none, no se ve
+          id="thumbsCol" → contenedor visual donde el JS pinta las miniaturas
+        -->
+      <div id="galeria" style="display:none"
+              data-fotos='[ 
+              {"src":"assets/images/anuncio023/1.jpg","label":"1"},
+              {"src":"assets/images/anuncio023/IMG2.webp","label":"IMG2"},
+              {"src":"assets/images/anuncio023/IMG3.webp","label":"IMG3"},
+              {"src":"assets/images/anuncio023/IMG4.webp","label":"IMG4"},
+              {"src":"assets/images/anuncio023/IMG5.webp","label":"IMG5"},       
+              {"src":"assets/images/anuncio023/IMG6.webp","label":"IMG6"},
+              {"src":"assets/images/anuncio023/IMG7.webp","label":"IMG7"}
+             ]'>
+            </div>
+              
+        <div class="thumbs-col" id="thumbsCol"></div>
+        <!-- /galeria -->
+
+      </div>
+
+        
         <div class="below-gallery">
           <span class="codigo-text">Código: 0023</span>
           <div class="gallery-actions">
@@ -271,12 +298,12 @@
             <div class="info-spec"><i class="fa-solid fa-building spec-ico"></i><span class="spec-label">Sin parqueadero</span></div>
           </div>
 
-          <div class="info-price">$ 2.000.000</div>
+          <div class="info-price">$ 15.000.000</div>
 
           <div class="agente-contact-row">
             <div class="agente-side">
               <div class="agente-avatar">
-                <img src="https://st3.depositphotos.com/1003989/17911/i/450/depositphotos_179114944-stock-photo-smiling-businesswoman-wearing-black-suit.jpg" alt="Tatiana">
+                <img src="assets/images/imgInicio/alexis.jpeg" alt="Tatiana">
               </div>
               <span class="agente-nombre">Alexis A.</span>
             </div>
@@ -309,7 +336,7 @@
 
       <!-- Descripción y iconos-->
       <div class="detail-left">
-        <div class="price-heading">$ 2.000.000</div>
+        <div class="price-heading">$ 15.000.000</div>
         <div class="prop-subtitle">
           Local Comercial<br>
           <span>Sta Fe de Ant, Llano de Bolívar</span>
